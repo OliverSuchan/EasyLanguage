@@ -1,0 +1,38 @@
+<Conjugation>
+	<Postfix value="ar">
+		<Singular>
+			<First value="Yo" conjugation="[rw]o" />
+			<Second value="Tu" conjugation="[rw]as" />
+			<Third value="El;Ella;Usted;" conjugation="[rw]a"/>
+		</Singular>
+		<Plural>
+			<First value="Nosotros" conjugation="[rw]amos"/>
+			<Second value="Vosotros" conjugation="[rw]ais"/>
+			<Third value="Ellos;Ellas;Ustedes;" conjugation="[rw]an" />
+		</Plural>
+	</Postfix>
+	<Postfix value="er">
+		<Singular>
+			<First value="Yo" conjugation="[rw]o" />
+			<Second value="Tu" conjugation="[rw]es" />
+			<Third value="El;Ella;Usted;" conjugation="[rw]e"/>
+		</Singular>
+		<Plural>
+			<First value="Nosotros" conjugation="[rw]emos"/>
+			<Second value="Vosotros" conjugation="[rw]eis"/>
+			<Third value="Ellos;Ellas;Ustedes;" conjugation="[rw]en" />
+		</Plural>
+	</Postfix>
+	<Postfix value="ir">
+		<Singular>
+			<First value="Yo" conjugation="[rw]o" />
+			<Second value="Tu" conjugation="[rw]es" />
+			<Third value="El;Ella;Usted;" conjugation="[rw]e"/>
+		</Singular>
+		<Plural>
+			<First value="Nosotros" conjugation="[rw]imos"/>
+			<Second value="Vosotros" conjugation="[rw]is"/>
+			<Third value="Ellos;Ellas;Ustedes;" conjugation="[rw]en" />
+		</Plural>
+	</Postfix>
+</Conjugation>

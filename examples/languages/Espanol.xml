@@ -1,0 +1,30 @@
+<Language name="Espanol">
+	<Lection number="1">
+		<Voc type="0" state="4" value="palabra">
+			<Definition>Wort;</Definition>
+			<Synonym>verbo</Synonym>
+		</Voc>
+		<Voc type="1" state="4" value="tom;ar" regular="1">
+			<Definition>trinken;</Definition>
+			<Synonym></Synonym>
+		</Voc>
+		<Voc type="1" state="4" value="com;er" regular="1" >
+			<Definition>essen;</Definition>
+			<Synonym></Synonym>
+		</Voc>
+		<Voc type="1" state="4" value="prefer;ir" regular="0" >
+			<Definition>bevorzugen;</Definition>
+			<Synonym></Synonym>
+			<Persons>
+				<Singular>
+					<First value="Yo" conjugation="prefiero" />
+					<Second value="Tu" conjugation="prefieres" />
+					<Third value="El;Ella;Usted;" conjugation="prefiere" />
+				</Singular>
+				<Plural>
+					<Third value="Ellos;Ellas;Ustedes;" conjugation="prefieren" />
+				</Plural>
+			</Persons>
+		</Voc>
+	</Lection>
+</Language>

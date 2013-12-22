@@ -1,0 +1,19 @@
+<Conjugation>
+	<!---
+		[rw] -> root word -> Wortstamm 
+		[wp] -> word postfix -> Wortendung
+		Für weiteres Beispiel, siehe "Espanol.cjt"
+	-->
+	<Postfix value="[x]">
+		<Singular>
+			<First value="I" conjugation="[rw]" />
+			<Second value="You" conjugation="[rw]" />
+			<Third value="He;She;It;" conjugation="[rw]s"/>
+		</Singular>
+		<Plural>
+			<First value="We" conjugation="[rw]"/>
+			<Second value="You" conjugation="[rw]"/>
+			<Third value="They" conjugation="[rw]" />
+		</Plural>
+	</Postfix>
+</Conjugation>

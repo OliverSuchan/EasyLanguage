@@ -1,0 +1,16 @@
+<Language name="English">
+	<Lection number="1">
+		<Voc type="0" state="4" value="word">
+			<Definition>Wort;</Definition>
+			<Synonym></Synonym>
+		</Voc>
+		<Voc type="1" state="4" value="drink;[x]" regular="true">
+			<Definition>trinken;</Definition>
+			<Synonym></Synonym>
+		</Voc>
+		<Voc type="1" state="4" value="eat;[x]" regular="true" >
+			<Definition>essen;</Definition>
+			<Synonym></Synonym>
+		</Voc>
+	</Lection>
+</Language>
