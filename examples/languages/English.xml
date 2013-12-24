@@ -4,11 +4,11 @@
 			<Definition>Wort;</Definition>
 			<Synonym></Synonym>
 		</Voc>
-		<Voc type="1" state="4" value="drink;[x]" regular="true">
+		<Voc type="1" state="4" value="drink;[x]" regular="1">
 			<Definition>trinken;</Definition>
 			<Synonym></Synonym>
 		</Voc>
-		<Voc type="1" state="4" value="eat;[x]" regular="true" >
+		<Voc type="1" state="4" value="eat;[x]" regular="1" >
 			<Definition>essen;</Definition>
 			<Synonym></Synonym>
 		</Voc>

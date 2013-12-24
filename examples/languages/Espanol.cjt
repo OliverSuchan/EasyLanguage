@@ -1,4 +1,4 @@
-<Conjugation>
+﻿<Conjugation>
 	<Postfix value="ar">
 		<Singular>
 			<First value="Yo" conjugation="[rw]o" />
@@ -19,7 +19,7 @@
 		</Singular>
 		<Plural>
 			<First value="Nosotros" conjugation="[rw]emos"/>
-			<Second value="Vosotros" conjugation="[rw]eis"/>
+			<Second value="Vosotros" conjugation="[rw]éis"/>
 			<Third value="Ellos;Ellas;Ustedes;" conjugation="[rw]en" />
 		</Plural>
 	</Postfix>
@@ -31,7 +31,7 @@
 		</Singular>
 		<Plural>
 			<First value="Nosotros" conjugation="[rw]imos"/>
-			<Second value="Vosotros" conjugation="[rw]is"/>
+			<Second value="Vosotros" conjugation="[rw]ís"/>
 			<Third value="Ellos;Ellas;Ustedes;" conjugation="[rw]en" />
 		</Plural>
 	</Postfix>

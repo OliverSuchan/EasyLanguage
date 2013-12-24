@@ -9,6 +9,7 @@
 #include <vector>
 #include <exception>
 #include <iostream>
+#include <tuple>
 
 #ifndef Q_MOC_RUN
 #include "../include/boost/foreach.hpp"

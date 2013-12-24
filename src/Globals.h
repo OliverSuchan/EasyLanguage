@@ -3,6 +3,12 @@
 
 namespace Global
 {
+    enum VerbType
+    {
+        IRREGULAR,
+        REGULAR
+    };
+
     enum VocType
     {
         WORD,

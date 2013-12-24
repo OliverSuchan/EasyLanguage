@@ -43,14 +43,14 @@ QString Conjugation::getConjugation(size_t p_stIndex)
         throw std::exception();
 }
 
-QString Conjugation::getConjugation(QString p_qstPronoun)
+QString Conjugation::getConjugation(QString p_qstPronoun, bool p_bIsSingular)
 {
     for(size_t stIndex = 0; stIndex < m_mpPersonList.size(); stIndex++)
     {
-        if(std::get<0>(m_mpPersonList.at(stIndex)) == p_qstPronoun)
+        if(std::get<0>(m_mpPersonList.at(stIndex)) == p_qstPronoun && std::get<2>(m_mpPersonList.at(stIndex)) == p_bIsSingular)
             return std::get<1>(m_mpPersonList.at(stIndex));
     }
-    return "";
+    throw std::exception();
 }
 
 size_t Conjugation::getPersonListSize()

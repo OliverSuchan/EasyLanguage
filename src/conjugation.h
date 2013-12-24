@@ -21,7 +21,7 @@ private:
     void removePerson(size_t p_stIndex);
     QString getPronoun(size_t p_stIndex);
     QString getConjugation(size_t p_stIndex);
-    QString getConjugation(QString p_qstPronoun);
+    QString getConjugation(QString p_qstPronoun, bool p_bIsSingular);
     size_t getPersonListSize();
 };
 

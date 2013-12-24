@@ -106,7 +106,7 @@ void MainWindow::on_listWidget_3_itemClicked(QListWidgetItem *item)
             Conjugator cjCur = langCur.getLanguageConjugator();
             for(size_t stIndex_1 = 0; stIndex_1 < cjCur.getPronounListSize(); stIndex_1++)
             {
-                ui->listWidget_4->addItem(cjCur.getPronoun(stIndex_1));
+                ui->listWidget_4->addItem(cjCur.getPronoun(stIndex_1) + "|" + QString::number(cjCur.getIsSingular(stIndex_1)));
             }
             return;
         }
@@ -132,11 +132,12 @@ void MainWindow::on_listWidget_4_itemClicked(QListWidgetItem *item)
                         {
                             if(pverbCur->getVocType() == Global::VERB)
                             {
-                                QString qstVerbConjugation = langCur.getLanguageConjugator().conjugate(pverbCur->getWordPostFix(), item->text(), pverbCur->getWordRoot());
+                                QStringList verbShit = item->text().split("|");
+                                bool bBool = boost::lexical_cast<bool>(verbShit[1].toStdString());
+                                QString qstVerbConjugation = langCur.getLanguageConjugator().conjugate(verbShit[0], *pverbCur, bBool);
                                 ui->label->setText("Konjugation: " + qstVerbConjugation);
                                 ui->label_2->setText("Wortstamm: " + pverbCur->getWordRoot());
                                 ui->label_3->setText("Wortendung: " + pverbCur->getWordPostFix());
-
                             }
                             ui->label_4->setText("Bedeutung: " + pverbCur->getDefinition(0));
                             return;

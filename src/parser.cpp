@@ -98,6 +98,7 @@ Language Parser::parseLanguageDataBase(QString p_qstFileName)
                         pvocCur->setWord(QString::fromStdString(voc.second.get<std::string>("<xmlattr>.value")));
                         pvocCur->setVocType(vtCur);
                         pvocCur->setLearningState(lsCur);
+                        std::vector<std::tuple<QString, QString, bool>> mptupleIrregularPersons;
                         BOOST_FOREACH(const ptree::value_type& informations, voc.second.get_child(""))
                         {
                             if(informations.first == "Definition" || informations.first == "Synonym")
@@ -115,13 +116,38 @@ Language Parser::parseLanguageDataBase(QString p_qstFileName)
                                     }
                                 }
                             }
+                            else if(informations.first == "Persons")
+                            {
+                                BOOST_FOREACH(const ptree::value_type& personType, informations.second.get_child(""))
+                                {
+                                    if(personType.first == "Singular" || personType.first == "Plural")
+                                    {
+                                        bool bIsSingular = (personType.first == "Singular");
+                                        BOOST_FOREACH(const ptree::value_type& person, personType.second.get_child(""))
+                                        {
+                                            if(person.first == "First" || person.first == "Second" || person.first == "Third")
+                                            {
+                                                QString qstPronoun = QString::fromStdString(person.second.get<std::string>("<xmlattr>.value"));
+                                                QString qstConjugation = QString::fromStdString(person.second.get<std::string>("<xmlattr>.conjugation"));
+                                                mptupleIrregularPersons.push_back(std::make_tuple(qstPronoun, qstConjugation, bIsSingular));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                         if(vtCur == Global::VERB)
                         {
                             Verb *pverbCur = dynamic_cast<Verb*>(pvocCur);
+                            Global::VerbType verbTypeCur = static_cast<Global::VerbType>(voc.second.get<int>("<xmlattr>.regular"));
                             QStringList mpqst =  pverbCur->getWord().split(";");
                             pverbCur->setWordRoot(mpqst.at(0));
                             pverbCur->setWordPostFix(mpqst.at(1));
+                            pverbCur->setVerbType(verbTypeCur);
+                            if(verbTypeCur == Global::IRREGULAR)
+                            {
+                                pverbCur->addIrregularPersons(mptupleIrregularPersons);
+                            }
                             lectCur.addVoc(pverbCur);
                         }
                         else
