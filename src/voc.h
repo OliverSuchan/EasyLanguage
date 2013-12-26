@@ -2,11 +2,13 @@
 #define VOC_H
 
 #include <QString>
+#include <QCryptographicHash>
 #include <vector>
 #include <exception>
 #include "Globals.h"
+#include "IHashable.h"
 
-class Voc
+class Voc : IHashable
 {
 
 protected:
@@ -30,6 +32,10 @@ public:
     Voc();
     virtual ~Voc();
 
+
+    // IHashable interface
+public:
+    QString getHashCode();
 };
 
 #endif // VOC_H

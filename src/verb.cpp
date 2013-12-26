@@ -78,11 +78,24 @@ void Verb::setVerbType(Global::VerbType p_vtValue)
     m_vtCurVerb = p_vtValue;
 }
 
-Verb::Verb() : Voc()
+Verb::Verb() : Voc(), IHashable()
 {
 }
 
 Verb::~Verb()
 {
 
+}
+
+QString Verb::getHashCode()
+{
+    QString qstPlainHash = Voc::getHashCode() + m_qstWordRoot + m_qstWordPostFix + QString::number(m_vtCurVerb);
+    for(size_t stIndex = 0; stIndex < m_mpqstIrregularPerson.size(); stIndex++)
+    {
+        std::tuple<QString, QString, bool> mpCurTuple = m_mpqstIrregularPerson.at(stIndex);
+        qstPlainHash += std::get<0>(mpCurTuple) + std::get<1>(mpCurTuple) + QString::number(std::get<2>(mpCurTuple));
+    }
+    QCryptographicHash qcrypthshClassHash(QCryptographicHash::Sha1);
+    qcrypthshClassHash.addData(qstPlainHash.toStdString().c_str(), qstPlainHash.size());
+    return QString::fromLatin1(qcrypthshClassHash.result().toHex().toUpper());
 }

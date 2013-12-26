@@ -2,12 +2,14 @@
 #define LANGUAGE_H
 
 #include <QString>
+#include <QCryptographicHash>
 #include <vector>
 #include <exception>
+#include "IHashable.h"
 #include "conjugator.h"
 #include "lection.h"
 
-class Language
+class Language : IHashable
 {
 private:
     QString m_qstLangName;
@@ -24,6 +26,10 @@ public:
     void setLanguageName(const QString &p_qstLangName);
     Conjugator getLanguageConjugator() const;
     void setLanguageConjugator(const Conjugator &p_cjValue);
+
+    // IHashable interface
+public:
+    QString getHashCode();
 };
 
 #endif // LANGUAGE_H

@@ -35,7 +35,8 @@ HEADERS  += \
     src/mainwindow.h \
     src/parser.h \
     src/verb.h \
-    src/voc.h
+    src/voc.h \
+    src/IHashable.h
 
 FORMS    += \
     forms/mainwindow.ui

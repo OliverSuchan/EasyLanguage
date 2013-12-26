@@ -1,9 +1,12 @@
 #ifndef LANGUAGEMANAGER_H
 #define LANGUAGEMANAGER_H
 
+#include <QString>
+#include <QObject>
 #include <assert.h>
 #include <iostream>
 #include <vector>
+#include <tuple>
 #include <exception>
 #include "language.h"
 
@@ -11,7 +14,7 @@ class LanguageManager
 {
 private:
     static LanguageManager *m_pInstance;
-    std::vector<Language> m_mpLanguage;
+    std::vector<std::tuple<Language, QString>> m_mpLanguage;
     LanguageManager();
     ~LanguageManager();
     LanguageManager(const LanguageManager& p_lm);

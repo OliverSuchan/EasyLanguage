@@ -3,9 +3,10 @@
 
 #include <QString>
 #include <vector>
+#include "IHashable.h"
 #include "voc.h"
 
-class Lection
+class Lection : IHashable
 {
 private:
     std::vector<Voc*> m_mpVocabulary;
@@ -19,6 +20,10 @@ public:
     Lection();
     qint8 getLectionNumber() const;
     void setLectionNumber(const qint8 &p_qi8Value);
+
+    // IHashable interface
+public:
+    QString getHashCode();
 };
 
 #endif // LECTION_H

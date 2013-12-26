@@ -6,9 +6,10 @@
 #include <vector>
 #include <tuple>
 #include "Globals.h"
+#include "IHashable.h"
 #include "voc.h"
 
-class Verb : public Voc
+class Verb : public Voc, IHashable
 {
 
 private:
@@ -32,6 +33,10 @@ public:
     void setVerbType(Global::VerbType p_vtValue);
     Verb();
     ~Verb();
+
+    // IHashable interface
+public:
+    QString getHashCode();
 };
 
 #endif // VERB_H

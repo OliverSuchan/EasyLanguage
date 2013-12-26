@@ -57,11 +57,28 @@ void Voc::setWord(QString p_qstValue)
         m_qstWord = p_qstValue;
 }
 
-Voc::Voc()
+Voc::Voc() : IHashable()
 {
 }
 
 Voc::~Voc()
 {
 
+}
+
+QString Voc::getHashCode()
+{
+    QString qstPlainHash = m_qstWord + m_ctCurVoc + m_lsCurVoc;
+    for(size_t stIndex = 0; stIndex < m_mpqstDefinition.size(); stIndex++)
+    {
+        qstPlainHash += m_mpqstDefinition.at(stIndex);
+    }
+
+    for(size_t stIndex = 0; stIndex < m_mpqstSynonym.size(); stIndex++)
+    {
+        qstPlainHash += m_mpqstSynonym.at(stIndex);
+    }
+    QCryptographicHash qcrypthshClassHash(QCryptographicHash::Sha1);
+    qcrypthshClassHash.addData(qstPlainHash.toStdString().c_str(), qstPlainHash.size());
+    return QString::fromLatin1(qcrypthshClassHash.result().toHex().toUpper());
 }

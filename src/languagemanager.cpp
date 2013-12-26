@@ -28,7 +28,7 @@ size_t LanguageManager::getLanguageListSize()
 Language LanguageManager::getLanguage(size_t p_stIndex)
 {
     if(p_stIndex < m_mpLanguage.size())
-        return m_mpLanguage.at(p_stIndex);
+        return std::get<0>(m_mpLanguage.at(p_stIndex));
     else
         throw std::exception();
 }
@@ -36,7 +36,9 @@ Language LanguageManager::getLanguage(size_t p_stIndex)
 void LanguageManager::addLanguage(Language p_langValue)
 {
     if(&p_langValue)
-        m_mpLanguage.push_back(p_langValue);
+    {
+        m_mpLanguage.push_back(std::make_tuple(p_langValue, p_langValue.getHashCode()));
+    }
 }
 
 void LanguageManager::removeLanguage(size_t p_stIndex)
