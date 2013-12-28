@@ -20,6 +20,16 @@ LanguageManager &LanguageManager::operator=(const LanguageManager &p_assignLangu
     return *m_pInstance;
 }
 
+QString LanguageManager::getHashCodeByLanguageName(QString p_qstLangName)
+{
+    for(size_t stIndex = 0; stIndex < m_mpLanguage.size(); stIndex++)
+    {
+        if(std::get<0>(m_mpLanguage.at(stIndex).getLanguageName() == p_qstLangName))
+            return std::get<1>(m_mpLanguage.at(stIndex));
+    }
+    throw std::exception();
+}
+
 size_t LanguageManager::getLanguageListSize()
 {
     return m_mpLanguage.size();
@@ -33,12 +43,41 @@ Language LanguageManager::getLanguage(size_t p_stIndex)
         throw std::exception();
 }
 
+Language LanguageManager::getLanguage(QString p_qstLangName)
+{
+    for(size_t stIndex = 0; stIndex < m_mpLanguage.size(); stIndex++)
+    {
+        if(std::get<0>(m_mpLanguage.at(stIndex).getLanguageName() == p_qstLangName))
+            return std::get<0>(m_mpLanguage.at(stIndex));
+    }
+    throw std::exception();
+}
+
+bool LanguageManager::languageGotEdited(size_t p_stIndex)
+{
+    try
+    {
+        if(getLanguage(p_stIndex).getHashCode() == std::get<1>(m_mpLanguage.at(p_stIndex)))
+            return false;
+    }
+    catch()
+    return true;
+}
+
+bool LanguageManager::languageGotEdited(QStriSng p_qstLangName)
+{
+    try
+    {
+        if(getLanguage(p_qstLangName).getHashCode() == getHashCodeByLanguageName())
+            return false;
+    }
+    catch()
+    return true;
+}
+
 void LanguageManager::addLanguage(Language p_langValue)
 {
-    if(&p_langValue)
-    {
-        m_mpLanguage.push_back(std::make_tuple(p_langValue, p_langValue.getHashCode()));
-    }
+    m_mpLanguage.push_back(std::make_tuple(p_langValue, p_langValue.getHashCode()));
 }
 
 void LanguageManager::removeLanguage(size_t p_stIndex)

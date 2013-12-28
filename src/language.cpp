@@ -41,8 +41,7 @@ Language::Language() : IHashable()
 
 void Language::addLection(Lection p_lectionValue)
 {
-    if(&p_lectionValue)
-        m_mpLection.push_back(p_lectionValue);
+    m_mpLection.push_back(p_lectionValue);
 }
 
 void Language::removeLection(size_t p_stIndex)
