@@ -87,7 +87,7 @@ void Writer::rewriteModifiedLanguageDatabase(Language p_langValue, QString p_qst
             pt.get_child("Language").add_child("Lection", ptLection);
         }
         boost::property_tree::xml_writer_settings<char> settings('\t', 1);
-        write_xml((p_qstFileName + ".penis").toStdString(), pt, std::locale(), settings);
+        write_xml(p_qstFileName.toStdString(), pt, std::locale(), settings);
     }
     catch(std::exception &e)
     {
