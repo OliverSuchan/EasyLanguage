@@ -2,9 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QObject>
+#include <QCloseEvent>
 #include <QListWidgetItem>
 #include <boost/lexical_cast.hpp>
+#include "writer.h"
 #include "translator.h"
 #include "parser.h"
 #include "conjugator.h"
@@ -39,6 +42,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+     void closeEvent(QCloseEvent *event);
 
 };
 

@@ -21,7 +21,7 @@ Translator &Translator::operator=(const Translator &)
     return *s_pTranslatorInstance;
 }
 
-Translator *Translator::instance()
+Translator *Translator::INSTANCE()
 {
     if(!s_pTranslatorInstance) s_pTranslatorInstance = new Translator;
     assert(s_pTranslatorInstance != NULL);

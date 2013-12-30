@@ -24,7 +24,8 @@ SOURCES +=\
     src/parser.cpp \
     src/verb.cpp \
     src/voc.cpp \
-    src/translator.cpp
+    src/translator.cpp \
+    src/writer.cpp
 
 HEADERS  += \
     src/conjugation.h \
@@ -38,7 +39,8 @@ HEADERS  += \
     src/verb.h \
     src/voc.h \
     src/IHashable.h \
-    src/translator.h
+    src/translator.h \
+    src/writer.h
 
 FORMS    += \
     forms/mainwindow.ui

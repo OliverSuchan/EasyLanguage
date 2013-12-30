@@ -22,6 +22,32 @@ void Verb::removeIrregularPerson(size_t p_stIndex)
         m_mpqstIrregularPerson.erase(m_mpqstIrregularPerson.begin() + p_stIndex);
 }
 
+std::vector<std::tuple<QString, QString> > Verb::getIrregularPersonsSingular()
+{
+    std::vector<std::tuple<QString, QString>> mptplqstIrregPersonsSing;
+    for(size_t stIndex = 0; stIndex < m_mpqstIrregularPerson.size(); stIndex++)
+    {
+        if(std::get<2>(m_mpqstIrregularPerson.at(stIndex)) == true)
+            mptplqstIrregPersonsSing.push_back(std::make_tuple(std::get<0>(m_mpqstIrregularPerson.at(stIndex)), std::get<1>(m_mpqstIrregularPerson.at(stIndex))));
+    }
+    if(mptplqstIrregPersonsSing.size() != 0)
+        return mptplqstIrregPersonsSing;
+    throw std::exception();
+}
+
+std::vector<std::tuple<QString, QString> > Verb::getIrregularPersonsPlural()
+{
+    std::vector<std::tuple<QString, QString>> mptplqstIrregPersonsPlur;
+    for(size_t stIndex = 0; stIndex < m_mpqstIrregularPerson.size(); stIndex++)
+    {
+        if(std::get<2>(m_mpqstIrregularPerson.at(stIndex)) == false)
+            mptplqstIrregPersonsPlur.push_back(std::make_tuple(std::get<0>(m_mpqstIrregularPerson.at(stIndex)), std::get<1>(m_mpqstIrregularPerson.at(stIndex))));
+    }
+    if(mptplqstIrregPersonsPlur.size() != 0)
+        return mptplqstIrregPersonsPlur;
+    throw std::exception();
+}
+
 QString Verb::getIrregularConjugationByPronoun(QString p_qstPronoun, bool p_bIsSingular)
 {
     for(size_t stIndex = 0; stIndex < m_mpqstIrregularPerson.size(); stIndex++)

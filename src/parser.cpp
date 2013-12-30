@@ -21,13 +21,14 @@ void Parser::parseLanguageDatabases()
             QString qstCurrentFileName = dirIterator.next();
             if(qstCurrentFileName.endsWith(".xml"))
             {
+                QString qstCurrentFileNameCopy = qstCurrentFileName;
                 Language langCur = parseLanguageDataBase(qstCurrentFileName);
                 if(QFile::exists(qstCurrentFileName.replace(".xml", ".cjt")))
                 {
                     Conjugator cjCur = parseConjugationDataBase(qstCurrentFileName.replace(".xml", ".cjt"));
                     langCur.setLanguageConjugator(cjCur);
                 }
-                LanguageManager::INSTANCE()->addLanguage(langCur);
+                LanguageManager::INSTANCE()->addLanguage(langCur, qstCurrentFileNameCopy);
             }
         }
     }
@@ -103,7 +104,7 @@ Language Parser::parseLanguageDataBase(QString p_qstFileName)
                         {
                             if(informations.first == "Definition" || informations.first == "Synonym")
                             {
-                                QStringList mpqstInfos = QString::fromStdString(informations.second.get<std::string>("")).split(";");
+                                QStringList mpqstInfos = QString::fromStdString(informations.second.get<std::string>("<xmlattr>.value")).split(";");
                                 for(int iIndex = 0; iIndex < mpqstInfos.size(); iIndex++)
                                 {
                                     QString qstCurInfo = mpqstInfos.at(iIndex);
@@ -125,7 +126,7 @@ Language Parser::parseLanguageDataBase(QString p_qstFileName)
                                         bool bIsSingular = (personType.first == "Singular");
                                         BOOST_FOREACH(const ptree::value_type& person, personType.second.get_child(""))
                                         {
-                                            if(person.first == "First" || person.first == "Second" || person.first == "Third")
+                                            if(person.first == "Person")
                                             {
                                                 QString qstPronoun = QString::fromStdString(person.second.get<std::string>("<xmlattr>.value"));
                                                 QString qstConjugation = QString::fromStdString(person.second.get<std::string>("<xmlattr>.conjugation"));

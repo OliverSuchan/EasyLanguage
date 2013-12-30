@@ -8,13 +8,15 @@
 #include <vector>
 #include <tuple>
 #include <exception>
+#include "Writer.h"
 #include "language.h"
 
 class LanguageManager
 {
+
 private:
     static LanguageManager *m_pInstance;
-    std::vector<std::tuple<Language, QString>> m_mpLanguage;
+    std::vector<std::tuple<Language, QString, QString>> m_mptpllangqstLanguage;
     LanguageManager();
     ~LanguageManager();
     LanguageManager(const LanguageManager& p_lm);
@@ -27,7 +29,9 @@ public:
     Language getLanguage(QString p_qstLangName);
     bool languageGotEdited(size_t p_stIndex);
     bool languageGotEdited(QString p_qstLangName);
-    void addLanguage(Language p_langValue);
+    bool languagesGotModified();
+    void addLanguage(Language p_langValue, QString p_qstLanguageDatabaseFilename);
+    std::vector<std::tuple<Language, QString>> getModifiedLanguageDatabases();
     void removeLanguage(size_t p_stIndex);
     static LanguageManager* INSTANCE();
 

@@ -103,7 +103,6 @@ void MainWindow::on_listWidget_3_itemClicked(QListWidgetItem *item)
         Language langCur = LanguageManager::INSTANCE()->getLanguage(stIndex);
         if(ui->listWidget->selectedItems()[0]->text() == langCur.getLanguageName())
         {
-            std::cout << Translator::instance()->translate(langCur, LanguageManager::INSTANCE()->getLanguage("English"), item->text()).at(0).toStdString() << std::endl;
             Conjugator cjCur = langCur.getLanguageConjugator();
             for(size_t stIndex_1 = 0; stIndex_1 < cjCur.getPronounListSize(); stIndex_1++)
             {
@@ -140,6 +139,23 @@ void MainWindow::on_listWidget_4_itemClicked(QListWidgetItem *item)
                     return;
                 }
             }
+        }
+    }
+}
+
+void MainWindow::closeEvent (QCloseEvent *event)
+{
+    if(LanguageManager::INSTANCE()->languagesGotModified())
+    {
+        QMessageBox::StandardButton resBtn = QMessageBox::question( this, "APP_NAME",
+                                                                    tr("Neu schreiben?\n"),
+                                                                    QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+                                                                    QMessageBox::Yes);
+
+        if (resBtn == QMessageBox::Yes) {
+            Writer::INSTANCE()->rewriteModifiedLanguageDatabases();
+        } else {
+            event->accept();
         }
     }
 }
