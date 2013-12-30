@@ -24,7 +24,7 @@ QString LanguageManager::getHashCodeByLanguageName(QString p_qstLangName)
 {
     for(size_t stIndex = 0; stIndex < m_mpLanguage.size(); stIndex++)
     {
-        if(std::get<0>(m_mpLanguage.at(stIndex).getLanguageName() == p_qstLangName))
+        if(std::get<0>(m_mpLanguage.at(stIndex)).getLanguageName().toUpper() == p_qstLangName.toUpper())
             return std::get<1>(m_mpLanguage.at(stIndex));
     }
     throw std::exception();
@@ -47,8 +47,9 @@ Language LanguageManager::getLanguage(QString p_qstLangName)
 {
     for(size_t stIndex = 0; stIndex < m_mpLanguage.size(); stIndex++)
     {
-        if(std::get<0>(m_mpLanguage.at(stIndex).getLanguageName() == p_qstLangName))
-            return std::get<0>(m_mpLanguage.at(stIndex));
+        Language langCur = std::get<0>(m_mpLanguage.at(stIndex));
+        if(langCur.getLanguageName().toUpper() == p_qstLangName.toUpper())
+            return langCur;
     }
     throw std::exception();
 }
@@ -60,18 +61,18 @@ bool LanguageManager::languageGotEdited(size_t p_stIndex)
         if(getLanguage(p_stIndex).getHashCode() == std::get<1>(m_mpLanguage.at(p_stIndex)))
             return false;
     }
-    catch()
+    catch(std::exception &e) {}
     return true;
 }
 
-bool LanguageManager::languageGotEdited(QStriSng p_qstLangName)
+bool LanguageManager::languageGotEdited(QString p_qstLangName)
 {
     try
     {
-        if(getLanguage(p_qstLangName).getHashCode() == getHashCodeByLanguageName())
+        if(getLanguage(p_qstLangName).getHashCode() == getHashCodeByLanguageName(p_qstLangName))
             return false;
     }
-    catch()
+    catch(std::exception& e) {}
     return true;
 }
 

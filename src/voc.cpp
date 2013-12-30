@@ -46,6 +46,24 @@ QString Voc::getDefinition(size_t p_stIndex)
         throw std::exception();
 }
 
+size_t Voc::getDefinitionListSize()
+{
+    return m_mpqstDefinition.size();
+}
+
+QString Voc::getSynonym(size_t p_stIndex)
+{
+    if(p_stIndex < m_mpqstSynonym.size())
+        return m_mpqstSynonym.at(p_stIndex);
+    else
+        throw std::exception();
+}
+
+size_t Voc::getSynonymListSize()
+{
+    return m_mpqstSynonym.size();
+}
+
 QString Voc::getWord()
 {
     return m_qstWord;

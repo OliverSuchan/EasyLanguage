@@ -22,7 +22,9 @@ public:
     void addDefinition(QString p_qstDefinition);
     void addSynonym(QString p_qstSynonym);
     QString getDefinition(size_t p_stIndex);
+    size_t getDefinitionListSize();
     QString getSynonym(size_t p_stIndex);
+    size_t getSynonymListSize();
     QString getWord();
     void setWord(QString p_qstValue);
     Global::VocType getVocType();

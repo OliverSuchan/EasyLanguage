@@ -103,6 +103,7 @@ void MainWindow::on_listWidget_3_itemClicked(QListWidgetItem *item)
         Language langCur = LanguageManager::INSTANCE()->getLanguage(stIndex);
         if(ui->listWidget->selectedItems()[0]->text() == langCur.getLanguageName())
         {
+            std::cout << Translator::instance()->translate(langCur, LanguageManager::INSTANCE()->getLanguage("English"), item->text()).at(0).toStdString() << std::endl;
             Conjugator cjCur = langCur.getLanguageConjugator();
             for(size_t stIndex_1 = 0; stIndex_1 < cjCur.getPronounListSize(); stIndex_1++)
             {
@@ -115,37 +116,30 @@ void MainWindow::on_listWidget_3_itemClicked(QListWidgetItem *item)
 
 void MainWindow::on_listWidget_4_itemClicked(QListWidgetItem *item)
 {
-    for(size_t stIndex = 0; stIndex < LanguageManager::INSTANCE()->getLanguageListSize(); stIndex++)
+    Language langCur = LanguageManager::INSTANCE()->getLanguage(ui->listWidget->selectedItems()[0]->text());
+    for(size_t stIndex_1 = 0; stIndex_1 < langCur.getLectionListSize(); stIndex_1++)
     {
-        Language langCur = LanguageManager::INSTANCE()->getLanguage(stIndex);
-        if(ui->listWidget->selectedItems()[0]->text() == langCur.getLanguageName())
+        Lection lectCur = langCur.getLection(stIndex_1);
+        if(QString::number(lectCur.getLectionNumber()) == ui->listWidget_2->selectedItems()[0]->text())
         {
-            for(size_t stIndex_1 = 0; stIndex_1 < langCur.getLectionListSize(); stIndex_1++)
+            for(size_t stIndex_2 = 0; stIndex_2 < lectCur.getVocListSize(); stIndex_2++)
             {
-                Lection lectCur = langCur.getLection(stIndex_1);
-                if(QString::number(lectCur.getLectionNumber()) == ui->listWidget_2->selectedItems()[0]->text())
+                Verb *pverbCur = dynamic_cast<Verb*>(lectCur.getVoc(stIndex_2));
+                if(pverbCur->getWord() == ui->listWidget_3->selectedItems()[0]->text())
                 {
-                    for(size_t stIndex_2 = 0; stIndex_2 < lectCur.getVocListSize(); stIndex_2++)
+                    if(pverbCur->getVocType() == Global::VERB)
                     {
-                        Verb *pverbCur = dynamic_cast<Verb*>(lectCur.getVoc(stIndex_2));
-                        if(pverbCur->getWord() == ui->listWidget_3->selectedItems()[0]->text())
-                        {
-                            if(pverbCur->getVocType() == Global::VERB)
-                            {
-                                QStringList verbShit = item->text().split("|");
-                                bool bBool = boost::lexical_cast<bool>(verbShit[1].toStdString());
-                                QString qstVerbConjugation = langCur.getLanguageConjugator().conjugate(verbShit[0], *pverbCur, bBool);
-                                ui->label->setText("Konjugation: " + qstVerbConjugation);
-                                ui->label_2->setText("Wortstamm: " + pverbCur->getWordRoot());
-                                ui->label_3->setText("Wortendung: " + pverbCur->getWordPostFix());
-                            }
-                            ui->label_4->setText("Bedeutung: " + pverbCur->getDefinition(0));
-                            return;
-                        }
+                        QStringList verbShit = item->text().split("|");
+                        bool bBool = boost::lexical_cast<bool>(verbShit[1].toStdString());
+                        QString qstVerbConjugation = langCur.getLanguageConjugator().conjugate(verbShit[0], *pverbCur, bBool);
+                        ui->label->setText("Konjugation: " + qstVerbConjugation);
+                        ui->label_2->setText("Wortstamm: " + pverbCur->getWordRoot());
+                        ui->label_3->setText("Wortendung: " + pverbCur->getWordPostFix());
                     }
+                    ui->label_4->setText("Bedeutung: " + pverbCur->getDefinition(0));
+                    return;
                 }
             }
-
         }
     }
 }

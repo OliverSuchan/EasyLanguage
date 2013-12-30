@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QListWidgetItem>
 #include <boost/lexical_cast.hpp>
+#include "translator.h"
 #include "parser.h"
 #include "conjugator.h"
 #include "language.h"
