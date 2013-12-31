@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>Easy Language.png</file>
+    </qresource>
+</RCC>

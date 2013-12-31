@@ -25,7 +25,8 @@ SOURCES +=\
     src/verb.cpp \
     src/voc.cpp \
     src/translator.cpp \
-    src/writer.cpp
+    src/writer.cpp \
+    src/trainer.cpp
 
 HEADERS  += \
     src/conjugation.h \
@@ -40,7 +41,11 @@ HEADERS  += \
     src/voc.h \
     src/IHashable.h \
     src/translator.h \
-    src/writer.h
+    src/writer.h \
+    src/trainer.h
 
 FORMS    += \
     forms/mainwindow.ui
+
+RESOURCES += \
+    resources/images.qrc

@@ -15,6 +15,7 @@
 #include "lection.h"
 #include "voc.h"
 #include "verb.h"
+#include "trainer.h"
 
 namespace Ui {
 class MainWindow;
@@ -39,6 +40,8 @@ private slots:
     void on_listWidget_3_itemClicked(QListWidgetItem *item);
 
     void on_listWidget_4_itemClicked(QListWidgetItem *item);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

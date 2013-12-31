@@ -159,3 +159,16 @@ void MainWindow::closeEvent (QCloseEvent *event)
         }
     }
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    Trainer trainer;
+    trainer.startTraining(LanguageManager::INSTANCE()->getLanguage(ui->listWidget->selectedItems()[0]->text()), 4);
+    while(trainer.hasNext())
+    {
+        Voc *pvocCur = trainer.next();
+        std::cout << pvocCur->getWord().toStdString() << std::endl;
+        std::cout << trainer.isCorrect(pvocCur, "Wort") << std::endl;
+    }
+    trainer.stopTraining();
+}

@@ -57,30 +57,34 @@ void Writer::rewriteModifiedLanguageDatabase(Language p_langValue, QString p_qst
                 ptSynonym.add("<xmlattr>.value", qstSynonym.toStdString());
                 ptVoc.add_child("Synonym", ptSynonym);
                 Verb *verbCurrent = dynamic_cast<Verb*>(vocCurrent);
-                if(verbCurrent->getVocType() == Global::VERB && verbCurrent->getVerbType() == Global::IRREGULAR)
+                if(verbCurrent->getVocType() == Global::VERB)
                 {
-                    ptree ptPersons;
-                    ptree ptSingular;
-                    std::vector<std::tuple<QString, QString>> mptplqstIrregularPersonSingular = verbCurrent->getIrregularPersonsSingular();
-                    for(size_t stSingularPersonIndex = 0; stSingularPersonIndex < mptplqstIrregularPersonSingular.size(); stSingularPersonIndex++)
+                    ptVoc.add("<xmlattr>.regular", QString::number(verbCurrent->getVerbType()).toStdString());
+                    if(verbCurrent->getVerbType() == Global::IRREGULAR)
                     {
-                        ptree ptPerson;
-                        ptPerson.add("<xmlattr>.value", std::get<0>(mptplqstIrregularPersonSingular.at(stSingularPersonIndex)).toStdString());
-                        ptPerson.add("<xmlattr>.conjugation", std::get<1>(mptplqstIrregularPersonSingular.at(stSingularPersonIndex)).toStdString());
-                        ptSingular.add_child("Person", ptPerson);
+                        ptree ptPersons;
+                        ptree ptSingular;
+                        std::vector<std::tuple<QString, QString>> mptplqstIrregularPersonSingular = verbCurrent->getIrregularPersonsSingular();
+                        for(size_t stSingularPersonIndex = 0; stSingularPersonIndex < mptplqstIrregularPersonSingular.size(); stSingularPersonIndex++)
+                        {
+                            ptree ptPerson;
+                            ptPerson.add("<xmlattr>.value", std::get<0>(mptplqstIrregularPersonSingular.at(stSingularPersonIndex)).toStdString());
+                            ptPerson.add("<xmlattr>.conjugation", std::get<1>(mptplqstIrregularPersonSingular.at(stSingularPersonIndex)).toStdString());
+                            ptSingular.add_child("Person", ptPerson);
+                        }
+                        ptPersons.add_child("Singular", ptSingular);
+                        ptree ptPlural;
+                        std::vector<std::tuple<QString, QString>> mptplqstIrregularPersonPlural = verbCurrent->getIrregularPersonsPlural();
+                        for(size_t stPluralPersonIndex = 0; stPluralPersonIndex < mptplqstIrregularPersonPlural.size(); stPluralPersonIndex++)
+                        {
+                            ptree ptPerson;
+                            ptPerson.add("<xmlattr>.value", std::get<0>(mptplqstIrregularPersonPlural.at(stPluralPersonIndex)).toStdString());
+                            ptPerson.add("<xmlattr>.conjugation", std::get<1>(mptplqstIrregularPersonPlural.at(stPluralPersonIndex)).toStdString());
+                            ptPlural.add_child("Person", ptPerson);
+                        }
+                        ptPersons.add_child("Plural", ptPlural);
+                        ptVoc.add_child("Persons", ptPersons);
                     }
-                    ptPersons.add_child("Singular", ptSingular);
-                    ptree ptPlural;
-                    std::vector<std::tuple<QString, QString>> mptplqstIrregularPersonPlural = verbCurrent->getIrregularPersonsPlural();
-                    for(size_t stPluralPersonIndex = 0; stPluralPersonIndex < mptplqstIrregularPersonPlural.size(); stPluralPersonIndex++)
-                    {
-                        ptree ptPerson;
-                        ptPerson.add("<xmlattr>.value", std::get<0>(mptplqstIrregularPersonPlural.at(stPluralPersonIndex)).toStdString());
-                        ptPerson.add("<xmlattr>.conjugation", std::get<1>(mptplqstIrregularPersonPlural.at(stPluralPersonIndex)).toStdString());
-                        ptPlural.add_child("Person", ptPerson);
-                    }
-                    ptPersons.add_child("Plural", ptPlural);
-                    ptVoc.add_child("Persons", ptPersons);
                 }
                 ptLection.add_child("Voc", ptVoc);
             }
