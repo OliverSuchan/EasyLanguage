@@ -1,21 +1,18 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QMessageBox>
 #include <QObject>
-#include <QCloseEvent>
+#include <QMainWindow>
 #include <QListWidgetItem>
-#include <boost/lexical_cast.hpp>
+#include <QCloseEvent>
+#include <QMessageBox>
+#include <QStringList>
+#include <iostream>
+#include "parser.h"
+#include "languagemanager.h"
+#include "trainer.h"
 #include "writer.h"
 #include "translator.h"
-#include "parser.h"
-#include "conjugator.h"
-#include "language.h"
-#include "lection.h"
-#include "voc.h"
-#include "verb.h"
-#include "trainer.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,29 +26,51 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-
 private slots:
-    void parserFinished();
+    void on_commandLinkButton_clicked();
 
-    void on_listWidget_itemClicked(QListWidgetItem *item);
+    void on_comboBox_3_currentIndexChanged(const QString &arg1);
 
-    void on_listWidget_2_itemClicked(QListWidgetItem *item);
+    void on_comboBox_4_currentIndexChanged(const QString &arg1);
 
-    void on_listWidget_3_itemClicked(QListWidgetItem *item);
+    void onParserFinished();
 
-    void on_listWidget_4_itemClicked(QListWidgetItem *item);
+    void on_commandLinkButton_3_clicked();
+
+    void on_commandLinkButton_4_clicked();
+
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_comboBox_2_currentIndexChanged(const QString &arg1);
+
+    void on_commandLinkButton_2_clicked();
 
     void on_pushButton_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_comboBox_5_currentIndexChanged(const QString &arg1);
+
+    void on_comboBox_6_currentIndexChanged(const QString &arg1);
+
+    void on_checkBox_stateChanged(int arg1);
+
+    void on_commandLinkButton_5_clicked();
+
+    void on_checkBox_2_stateChanged(int arg1);
+
+    void on_listWidget_3_itemClicked(QListWidgetItem *item);
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
-
-     void closeEvent(QCloseEvent *event);
+    Trainer m_trnrCurrentTrainer;
+    void stopTraining();
+    void closeEvent(QCloseEvent *event);
+    Voc *m_pvocCreateNewVocCache;
+    Verb *m_pverbCreateNewVerbCache;
 
 };
-
-#else
-
-class MainWindow;
 
 #endif // MAINWINDOW_H

@@ -2,6 +2,7 @@
 #define VOC_H
 
 #include <QString>
+#include <QStringList>
 #include <QCryptographicHash>
 #include <vector>
 #include <exception>

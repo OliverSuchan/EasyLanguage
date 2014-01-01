@@ -24,20 +24,21 @@ QString LanguageManager::getHashCodeByLanguageName(QString p_qstLangName)
 {
     for(size_t stIndex = 0; stIndex < m_mptpllangqstLanguage.size(); stIndex++)
     {
-        if(std::get<0>(m_mptpllangqstLanguage.at(stIndex)).getLanguageName().toUpper() == p_qstLangName.toUpper())
+        if(std::get<0>(m_mptpllangqstLanguage.at(stIndex))->getLanguageName().toUpper() == p_qstLangName.toUpper())
             return std::get<1>(m_mptpllangqstLanguage.at(stIndex));
     }
     throw std::exception();
 }
 
 
-std::vector<std::tuple<Language, QString>> LanguageManager::getModifiedLanguageDatabases()
+std::vector<std::tuple<Language*, QString>> LanguageManager::getModifiedLanguageDatabases()
 {
-    std::vector<std::tuple<Language, QString>> mptpllangqstModifiedLanguagedDatabases;
+    std::vector<std::tuple<Language*, QString>> mptpllangqstModifiedLanguagedDatabases;
     for(size_t stIndex = 0; stIndex < m_mptpllangqstLanguage.size(); stIndex++)
     {
-        Language langCur = std::get<0>(m_mptpllangqstLanguage.at(stIndex));
-        if(langCur.getHashCode() != getHashCodeByLanguageName(langCur.getLanguageName()))
+        Language *langCur = new Language;
+        langCur = std::get<0>(m_mptpllangqstLanguage.at(stIndex));
+        if(langCur->getHashCode() != getHashCodeByLanguageName(langCur->getLanguageName()))
             mptpllangqstModifiedLanguagedDatabases.push_back(std::make_tuple(langCur, std::get<2>(m_mptpllangqstLanguage.at(stIndex))));
     }
     if(mptpllangqstModifiedLanguagedDatabases.size() != 0)
@@ -50,7 +51,7 @@ size_t LanguageManager::getLanguageListSize()
     return m_mptpllangqstLanguage.size();
 }
 
-Language LanguageManager::getLanguage(size_t p_stIndex)
+Language *LanguageManager::getLanguage(size_t p_stIndex)
 {
     if(p_stIndex < m_mptpllangqstLanguage.size())
         return std::get<0>(m_mptpllangqstLanguage.at(p_stIndex));
@@ -58,12 +59,13 @@ Language LanguageManager::getLanguage(size_t p_stIndex)
         throw std::exception();
 }
 
-Language LanguageManager::getLanguage(QString p_qstLangName)
+Language *LanguageManager::getLanguage(QString p_qstLangName)
 {
     for(size_t stIndex = 0; stIndex < m_mptpllangqstLanguage.size(); stIndex++)
     {
-        Language langCur = std::get<0>(m_mptpllangqstLanguage.at(stIndex));
-        if(langCur.getLanguageName().toUpper() == p_qstLangName.toUpper())
+        Language *langCur = new Language;
+        langCur = std::get<0>(m_mptpllangqstLanguage.at(stIndex));
+        if(langCur->getLanguageName().toUpper() == p_qstLangName.toUpper())
             return langCur;
     }
     throw std::exception();
@@ -83,7 +85,7 @@ bool LanguageManager::languageGotEdited(size_t p_stIndex)
 {
     try
     {
-        if(getLanguage(p_stIndex).getHashCode() == std::get<1>(m_mptpllangqstLanguage.at(p_stIndex)))
+        if(getLanguage(p_stIndex)->getHashCode() == std::get<1>(m_mptpllangqstLanguage.at(p_stIndex)))
             return false;
     }
     catch(std::exception &e) {}
@@ -94,16 +96,16 @@ bool LanguageManager::languageGotEdited(QString p_qstLangName)
 {
     try
     {
-        if(getLanguage(p_qstLangName).getHashCode() == getHashCodeByLanguageName(p_qstLangName))
+        if(getLanguage(p_qstLangName)->getHashCode() == getHashCodeByLanguageName(p_qstLangName))
             return false;
     }
     catch(std::exception& e) {}
     return true;
 }
 
-void LanguageManager::addLanguage(Language p_langValue, QString p_qstLanguageDatabaseFilename)
+void LanguageManager::addLanguage(Language *p_langValue, QString p_qstLanguageDatabaseFilename)
 {
-    m_mptpllangqstLanguage.push_back(std::make_tuple(p_langValue, p_langValue.getHashCode(), p_qstLanguageDatabaseFilename));
+    m_mptpllangqstLanguage.push_back(std::make_tuple(p_langValue, p_langValue->getHashCode(), p_qstLanguageDatabaseFilename));
 }
 
 void LanguageManager::removeLanguage(size_t p_stIndex)

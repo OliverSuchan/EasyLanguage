@@ -74,6 +74,14 @@ QString Verb::getIrregularConjugation(size_t p_stIndex)
         throw std::exception();
 }
 
+QString Verb::getOnlyVerb()
+{
+    if(getWordPostFix() == "[x]")
+        return getWord().split(";")[0];
+    else
+        return getWord().replace(";", "");
+}
+
 void Verb::setWordRoot(QString p_qstValue)
 {
     m_qstWordRoot = p_qstValue;

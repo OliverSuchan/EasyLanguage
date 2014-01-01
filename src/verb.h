@@ -27,6 +27,7 @@ public:
     QString getIrregularConjugationByPronoun(QString p_qstPronoun, bool p_bIsSingular);
     QString getPronoun(size_t p_stIndex);
     QString getIrregularConjugation(size_t p_stIndex);
+    QString getOnlyVerb();
     void setWordRoot(QString p_qstValue);
     void setWordPostFix(QString p_qstValue);
     QString getWordRoot();

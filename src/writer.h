@@ -24,7 +24,7 @@ private:
     Writer(Writer const&);
     Writer& operator=(Writer const&);
     static Writer* s_pWriterInstance;
-    void rewriteModifiedLanguageDatabase(Language p_langValue, QString p_qstFileName);
+    void rewriteModifiedLanguageDatabase(Language *p_langValue, QString p_qstFileName);
 
 public:
     static Writer* INSTANCE();

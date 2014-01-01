@@ -28,15 +28,16 @@ Translator *Translator::INSTANCE()
     return s_pTranslatorInstance;
 }
 
-std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(Language p_langValue, QString p_qstWord)
+std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(Language *p_langValue, QString p_qstWord)
 {
     std::tuple<std::vector<QString>, std::vector<QString>> tplmpqstWordInformations = std::make_tuple(std::vector<QString>(), std::vector<QString>());
-    for(size_t stIndexLection = 0; stIndexLection < p_langValue.getLectionListSize(); stIndexLection++)
+    for(size_t stIndexLection = 0; stIndexLection < p_langValue->getLectionListSize(); stIndexLection++)
     {
-        Lection lectCurrent = p_langValue.getLection(stIndexLection);
-        for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent.getVocListSize(); stIndexVoc++)
+        Lection *lectCurrent = new Lection;
+        lectCurrent = p_langValue->getLection(stIndexLection);
+        for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent->getVocListSize(); stIndexVoc++)
         {
-            Voc *vocCurrent = lectCurrent.getVoc(stIndexVoc);
+            Voc *vocCurrent = lectCurrent->getVoc(stIndexVoc);
             if(vocCurrent->getWord().toUpper() == p_qstWord.toUpper())
             {
                 for(size_t stIndexDefinition = 0; stIndexDefinition < vocCurrent->getDefinitionListSize(); stIndexDefinition++)
@@ -54,16 +55,17 @@ std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(La
     throw std::exception();
 }
 
-std::vector<QString> Translator::translate(Language p_langValueFrom, Language p_langValueInto, QString p_qstWord)
+std::vector<QString> Translator::translate(Language *p_langValueFrom, Language *p_langValueInto, QString p_qstWord)
 {
     std::tuple<std::vector<QString>, std::vector<QString>> tplmpqstFirstLanguage = translate(p_langValueFrom, p_qstWord);
     std::vector<QString> mpqstTranslation;
-    for(size_t stIndexLection = 0; stIndexLection < p_langValueInto.getLectionListSize(); stIndexLection++)
+    for(size_t stIndexLection = 0; stIndexLection < p_langValueInto->getLectionListSize(); stIndexLection++)
     {
-        Lection lectCurrent = p_langValueInto.getLection(stIndexLection);
-        for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent.getVocListSize(); stIndexVoc++)
+        Lection *lectCurrent = new Lection;
+        lectCurrent = p_langValueInto->getLection(stIndexLection);
+        for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent->getVocListSize(); stIndexVoc++)
         {
-            Voc *vocCurrent = lectCurrent.getVoc(stIndexVoc);
+            Voc *vocCurrent = lectCurrent->getVoc(stIndexVoc);
             for(size_t stIndexDefinition = 0; stIndexDefinition < vocCurrent->getDefinitionListSize(); stIndexDefinition++)
             {
                 for(size_t stIndexDefinition_1 = 0; stIndexDefinition_1 < getDefinitionListSize(tplmpqstFirstLanguage); stIndexDefinition_1++)

@@ -27,7 +27,7 @@ QString Language::getHashCode()
     QString qstPlainHash = m_qstLangName;
     for(size_t stIndex = 0; stIndex < getLectionListSize(); stIndex++)
     {
-        qstPlainHash += getLection(stIndex).getHashCode();
+        qstPlainHash += getLection(stIndex)->getHashCode();
     }
     QCryptographicHash qcrypthshClassHash(QCryptographicHash::Sha1);
     qcrypthshClassHash.addData(qstPlainHash.toStdString().c_str(), qstPlainHash.size());
@@ -39,7 +39,7 @@ Language::Language() : IHashable()
     
 }
 
-void Language::addLection(Lection p_lectionValue)
+void Language::addLection(Lection *p_lectionValue)
 {
     m_mpLection.push_back(p_lectionValue);
 }
@@ -52,7 +52,7 @@ void Language::removeLection(size_t p_stIndex)
         throw std::exception();
 }
 
-Lection Language::getLection(size_t p_stIndex)
+Lection *Language::getLection(size_t p_stIndex)
 {
     if(p_stIndex < m_mpLection.size())
         return m_mpLection.at(p_stIndex);

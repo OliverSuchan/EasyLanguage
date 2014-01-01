@@ -20,22 +20,46 @@ Trainer::Trainer()
 {
 }
 
-void Trainer::startTraining(Language p_langValue, int p_iSizeOfVocsToLearn)
+void Trainer::startTraining(Language *p_langValue, int p_iSizeOfVocsToLearn)
 {
     m_stCurrentIndex = 0;
-    std::vector<Voc*> mppvocAllVocs;
-    for(size_t stLectionIndex = 0; stLectionIndex < p_langValue.getLectionListSize(); stLectionIndex++)
+    std::vector<std::tuple<Voc*, bool>> mppvocAllVocs;
+    for(size_t stLectionIndex = 0; stLectionIndex < p_langValue->getLectionListSize(); stLectionIndex++)
     {
-        for(size_t stVocIndex = 0; stVocIndex < p_langValue.getLection(stLectionIndex).getVocListSize(); stVocIndex++)
+        for(size_t stVocIndex = 0; stVocIndex < p_langValue->getLection(stLectionIndex)->getVocListSize(); stVocIndex++)
         {
-            mppvocAllVocs.push_back(p_langValue.getLection(stLectionIndex).getVoc(stVocIndex));
+            mppvocAllVocs.push_back(std::make_tuple(p_langValue->getLection(stLectionIndex)->getVoc(stVocIndex), false));
         }
     }
 
     for(int iCounter = 0; iCounter < p_iSizeOfVocsToLearn; iCounter++)
     {
         size_t stRandomIndex = qrand() % (mppvocAllVocs.size());
-        m_mppvocVocToTrain.push_back(mppvocAllVocs.at(stRandomIndex));
+        if(std::get<1>(mppvocAllVocs.at(stRandomIndex)) == false)
+        {
+            m_mppvocVocToTrain.push_back(std::get<0>(mppvocAllVocs.at(stRandomIndex)));
+            std::get<1>(mppvocAllVocs.at(stRandomIndex)) = true;
+        }
+    }
+}
+
+void Trainer::startTraining(Lection *p_lectLectionToTrain, int p_iSizeOfVocsToLearn)
+{
+    m_stCurrentIndex = 0;
+    std::vector<std::tuple<Voc*, bool>> mppvocAllVocs;
+    for(size_t stVocIndex = 0; stVocIndex < p_lectLectionToTrain->getVocListSize(); stVocIndex++)
+    {
+        mppvocAllVocs.push_back(std::make_tuple(p_lectLectionToTrain->getVoc(stVocIndex), false));
+    }
+
+    for(int iCounter = 0; iCounter < p_iSizeOfVocsToLearn; iCounter++)
+    {
+        size_t stRandomIndex = qrand() % (mppvocAllVocs.size());
+        if(std::get<1>(mppvocAllVocs.at(stRandomIndex)) == false)
+        {
+            m_mppvocVocToTrain.push_back(std::get<0>(mppvocAllVocs.at(stRandomIndex)));
+            std::get<1>(mppvocAllVocs.at(stRandomIndex)) = true;
+        }
     }
 }
 
@@ -66,7 +90,8 @@ Voc *Trainer::next()
 {
     try
     {
-        return m_mppvocVocToTrain.at(m_stCurrentIndex++);
+        m_pvocCurrentVoc = m_mppvocVocToTrain.at(m_stCurrentIndex++);
+        return m_pvocCurrentVoc;
     }
     catch(std::exception &e)
     {
@@ -78,4 +103,9 @@ void Trainer::stopTraining()
 {
     m_mppvocVocToTrain.clear();
     m_stCurrentIndex = -1;
+}
+
+Voc *Trainer::getCurrentVoc() const
+{
+    return m_pvocCurrentVoc;
 }

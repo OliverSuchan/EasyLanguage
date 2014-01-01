@@ -2,7 +2,7 @@
 
 Parser* Parser::m_pInstance = new Parser;
 
-Parser *Parser::instance()
+Parser *Parser::INSTANCE()
 {
     if(!m_pInstance) m_pInstance = new Parser;
     assert(m_pInstance != NULL);
@@ -22,11 +22,12 @@ void Parser::parseLanguageDatabases()
             if(qstCurrentFileName.endsWith(".xml"))
             {
                 QString qstCurrentFileNameCopy = qstCurrentFileName;
-                Language langCur = parseLanguageDataBase(qstCurrentFileName);
+                Language *langCur = new Language;
+                langCur = parseLanguageDataBase(qstCurrentFileName);
                 if(QFile::exists(qstCurrentFileName.replace(".xml", ".cjt")))
                 {
                     Conjugator cjCur = parseConjugationDataBase(qstCurrentFileName.replace(".xml", ".cjt"));
-                    langCur.setLanguageConjugator(cjCur);
+                    langCur->setLanguageConjugator(cjCur);
                 }
                 LanguageManager::INSTANCE()->addLanguage(langCur, qstCurrentFileNameCopy);
             }
@@ -73,22 +74,22 @@ Conjugator Parser::parseConjugationDataBase(QString p_qstFileName)
     return cjCur;
 }
 
-Language Parser::parseLanguageDataBase(QString p_qstFileName)
+Language *Parser::parseLanguageDataBase(QString p_qstFileName)
 {
     ptree pt;
-    Language langCur;
+    Language *langCur = new Language;
     try
     {
         read_xml(p_qstFileName.toStdString().c_str(), pt);
         QString qstLanguageName = QString::fromStdString(pt.get_child("Language").get<std::string>("<xmlattr>.name"));
-        langCur.setLanguageName(qstLanguageName);
+        langCur->setLanguageName(qstLanguageName);
         BOOST_FOREACH(const ptree::value_type& lection, pt.get_child("Language"))
         {
             if(lection.first == "Lection")
             {
                 qint8 lectionNumber = lection.second.get<int>("<xmlattr>.number");
-                Lection lectCur;
-                lectCur.setLectionNumber(lectionNumber);
+                Lection *lectCur = new Lection;
+                lectCur->setLectionNumber(lectionNumber);
                 BOOST_FOREACH(const ptree::value_type& voc, lection.second.get_child(""))
                 {
                     if(voc.first == "Voc")
@@ -149,13 +150,13 @@ Language Parser::parseLanguageDataBase(QString p_qstFileName)
                             {
                                 pverbCur->addIrregularPersons(mptupleIrregularPersons);
                             }
-                            lectCur.addVoc(pverbCur);
+                            lectCur->addVoc(pverbCur);
                         }
                         else
-                            lectCur.addVoc(pvocCur);
+                            lectCur->addVoc(pvocCur);
                     }
                 }
-                langCur.addLection(lectCur);
+                langCur->addLection(lectCur);
             }
         }
     }

@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Language name="English">
 	<Lection number="1">
-		<Voc type="0" state="4" value="word">
-			<Definition>Wort;</Definition>
-			<Synonym></Synonym>
+		<Voc type="0" state="3" value="word">
+			<Definition value="Wort;"/>
+			<Synonym value=""/>
 		</Voc>
-		<Voc type="1" state="4" value="drink;[x]" regular="1">
-			<Definition>trinken;</Definition>
-			<Synonym></Synonym>
+		<Voc type="1" state="3" value="drink;[x]" regular="1">
+			<Definition value="trinken;"/>
+			<Synonym value=""/>
 		</Voc>
-		<Voc type="1" state="4" value="eat;[x]" regular="1" >
-			<Definition>essen;</Definition>
-			<Synonym></Synonym>
+		<Voc type="1" state="3" value="eat;[x]" regular="1">
+			<Definition value="essen;"/>
+			<Synonym value=""/>
 		</Voc>
 	</Lection>
 </Language>

@@ -32,12 +32,12 @@ class Parser : public QObject
     Q_OBJECT
 
 public:
-    static Parser* instance();
+    static Parser* INSTANCE();
     void parseLanguageDatabases();
 
 private:
     Conjugator parseConjugationDataBase(QString p_qstFileName);
-    Language parseLanguageDataBase(QString p_qstFileName);
+    Language *parseLanguageDataBase(QString p_qstFileName);
     explicit Parser(QObject *p_pqoParent = 0);
     ~Parser();
     Parser(Parser const&);
