@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Language name="Español">
+﻿<Language name="Español">
 	<Lection number="1">
 		<Voc type="0" state="3" value="palabra">
 			<Definition value="Wort;"/>
@@ -25,7 +24,7 @@
 				<Plural>
 					<Person value="Ellos;Ellas;Ustedes" conjugation="prefieren" />
 				</Plural>
-			<Persons/>
+			</Persons>
 		</Voc>
 		<Voc type="1" state="3" value="sal;ir" regular="0">
 			<Definition value="ausgehen;"/>
