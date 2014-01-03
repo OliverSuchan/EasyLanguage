@@ -16,6 +16,15 @@
 		<Voc type="1" state="3" value="prefer;ir" regular="0">
 			<Definition value="bevorzugen;"/>
 			<Synonym value=""/>
+			<Persons>
+				<Singular>
+					<Person value="Yo" conjugation="prefiero"/>
+					<Person value="Tú" conjugation="prefieres"/>
+					<Person value="Él;Ella;Usted" conjugation="prefiere"/>
+				</Singular>
+				<Plural>
+					<Person value="Ellos;Ellas;Ustedes" conjugation="prefieren" />
+				</Plural>
 			<Persons/>
 		</Voc>
 		<Voc type="1" state="3" value="sal;ir" regular="0">
