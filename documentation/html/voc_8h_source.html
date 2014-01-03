@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: voc.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('voc_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">voc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VOC_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define VOC_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QCryptographicHash&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Globals.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;IHashable.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_voc.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_voc.html">Voc</a> : <a class="code" href="class_i_hashable.html">IHashable</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_voc.html#a05be08f4ba76eb6954cc08d6771bf0fd">   23</a></span>&#160;    std::vector&lt;QString&gt; <a class="code" href="class_voc.html#a05be08f4ba76eb6954cc08d6771bf0fd">m_mpqstDefinition</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_voc.html#a5eaaf21a73221dbd357fab9bd718085a">   28</a></span>&#160;    std::vector&lt;QString&gt; <a class="code" href="class_voc.html#a5eaaf21a73221dbd357fab9bd718085a">m_mpqstSynonym</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_voc.html#a9e45612af348eac697db60b4bacd07ed">   33</a></span>&#160;    QString <a class="code" href="class_voc.html#a9e45612af348eac697db60b4bacd07ed">m_qstWord</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_voc.html#a16bd339a21f9abdf2ae86ac5079f7d1b">   38</a></span>&#160;    <a class="code" href="namespace_global.html#afdb6a8644918e4e01bc89054f9fd8e3a">Global::VocType</a> <a class="code" href="class_voc.html#a16bd339a21f9abdf2ae86ac5079f7d1b">m_ctCurVoc</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_voc.html#a44740b7113edb3cf5d0f786827c14444">   43</a></span>&#160;    <a class="code" href="namespace_global.html#ae55c0780c34d6ea170f03dc03bd46cb0">Global::LearningState</a> <a class="code" href="class_voc.html#a44740b7113edb3cf5d0f786827c14444">m_lsCurVoc</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_voc.html#a53f5bb64d6986a946efb66c928c860c6">addDefinition</a>(QString p_qstDefinition);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_voc.html#a5ad676fad52f0979908b85a88bcce9db">addSynonym</a>(QString p_qstSynonym);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QString <a class="code" href="class_voc.html#a9aa673c82d013b7d4dfd2024bf2bfac4">getDefinition</a>(<span class="keywordtype">size_t</span> p_stIndex);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_voc.html#aa36fbedc1a8bbeeab4378087c78de270">getDefinitionListSize</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QString <a class="code" href="class_voc.html#aa0d518fda9e8dd670ab6db1aedad0f58">getSynonym</a>(<span class="keywordtype">size_t</span> p_stIndex);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_voc.html#acca3226003440162b47903f96bd6ebb0">getSynonymListSize</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QString <a class="code" href="class_voc.html#ac60cfd9f919c6f7a8ccc6c056dfa08ca">getWord</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_voc.html#a3c0f49b072ab43b570102cdee8798112">setWord</a>(QString p_qstValue);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="namespace_global.html#afdb6a8644918e4e01bc89054f9fd8e3a">Global::VocType</a> <a class="code" href="class_voc.html#aadf441b2773ea4ff289c113d9adba54a">getVocType</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_voc.html#a8fe4939d3c76522443a95554c0b9218b">setVocType</a>(<a class="code" href="namespace_global.html#afdb6a8644918e4e01bc89054f9fd8e3a">Global::VocType</a> p_ctValue);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="namespace_global.html#ae55c0780c34d6ea170f03dc03bd46cb0">Global::LearningState</a> <a class="code" href="class_voc.html#a8ffa0f46f709799d5c46b3b0299bac2f">getLearningState</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_voc.html#a529cdf25d702959888a8e9f0dcc33a20">setLearningState</a>(<a class="code" href="namespace_global.html#ae55c0780c34d6ea170f03dc03bd46cb0">Global::LearningState</a> p_lsValue);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_voc.html#af3005e20fb453ca42464ec11bc2272ce">Voc</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_voc.html#a49cde75d9508feba535f4498633280d9">~Voc</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// IHashable interface</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    QString <a class="code" href="class_voc.html#a38913c76bf9c041ddd10d08de48de39f">getHashCode</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif // VOC_H</span></div>
+<div class="ttc" id="class_i_hashable_html"><div class="ttname"><a href="class_i_hashable.html">IHashable</a></div><div class="ttdoc">Interface für Klassen bei denen man einen Hashcode  der Klassen-Instanz generieren können soll...</div><div class="ttdef"><b>Definition:</b> IHashable.h:11</div></div>
+<div class="ttc" id="class_voc_html_a9aa673c82d013b7d4dfd2024bf2bfac4"><div class="ttname"><a href="class_voc.html#a9aa673c82d013b7d4dfd2024bf2bfac4">Voc::getDefinition</a></div><div class="ttdeci">QString getDefinition(size_t p_stIndex)</div><div class="ttdoc">Gibt eine Definition an einem bestimmten Index zurück  Existiert dieses Index nicht, wird eine Exception geworfen. </div><div class="ttdef"><b>Definition:</b> voc.cpp:41</div></div>
+<div class="ttc" id="class_voc_html_a53f5bb64d6986a946efb66c928c860c6"><div class="ttname"><a href="class_voc.html#a53f5bb64d6986a946efb66c928c860c6">Voc::addDefinition</a></div><div class="ttdeci">void addDefinition(QString p_qstDefinition)</div><div class="ttdoc">Fügt eine Definition hinzu. </div><div class="ttdef"><b>Definition:</b> voc.cpp:31</div></div>
+<div class="ttc" id="class_voc_html_a44740b7113edb3cf5d0f786827c14444"><div class="ttname"><a href="class_voc.html#a44740b7113edb3cf5d0f786827c14444">Voc::m_lsCurVoc</a></div><div class="ttdeci">Global::LearningState m_lsCurVoc</div><div class="ttdoc">Das Lernstadium. </div><div class="ttdef"><b>Definition:</b> voc.h:43</div></div>
+<div class="ttc" id="class_voc_html_a05be08f4ba76eb6954cc08d6771bf0fd"><div class="ttname"><a href="class_voc.html#a05be08f4ba76eb6954cc08d6771bf0fd">Voc::m_mpqstDefinition</a></div><div class="ttdeci">std::vector&lt; QString &gt; m_mpqstDefinition</div><div class="ttdoc">Liste der Definitionen einer Vokabel. </div><div class="ttdef"><b>Definition:</b> voc.h:23</div></div>
+<div class="ttc" id="class_voc_html_a529cdf25d702959888a8e9f0dcc33a20"><div class="ttname"><a href="class_voc.html#a529cdf25d702959888a8e9f0dcc33a20">Voc::setLearningState</a></div><div class="ttdeci">void setLearningState(Global::LearningState p_lsValue)</div><div class="ttdoc">Legt den aktuellen Lernstatus fest. </div><div class="ttdef"><b>Definition:</b> voc.cpp:22</div></div>
+<div class="ttc" id="class_voc_html_aa36fbedc1a8bbeeab4378087c78de270"><div class="ttname"><a href="class_voc.html#aa36fbedc1a8bbeeab4378087c78de270">Voc::getDefinitionListSize</a></div><div class="ttdeci">size_t getDefinitionListSize()</div><div class="ttdoc">Gibt die Anzahl der Definition zurück. </div><div class="ttdef"><b>Definition:</b> voc.cpp:49</div></div>
+<div class="ttc" id="class_voc_html_aa0d518fda9e8dd670ab6db1aedad0f58"><div class="ttname"><a href="class_voc.html#aa0d518fda9e8dd670ab6db1aedad0f58">Voc::getSynonym</a></div><div class="ttdeci">QString getSynonym(size_t p_stIndex)</div><div class="ttdoc">Gibt ein Synonym an einer bestimmten Stelle zurück  Existiert dieses Index nicht, wird eine Exception...</div><div class="ttdef"><b>Definition:</b> voc.cpp:54</div></div>
+<div class="ttc" id="class_voc_html_aadf441b2773ea4ff289c113d9adba54a"><div class="ttname"><a href="class_voc.html#aadf441b2773ea4ff289c113d9adba54a">Voc::getVocType</a></div><div class="ttdeci">Global::VocType getVocType()</div><div class="ttdoc">Gibt den aktuellen Vokabeltyp zurück. </div><div class="ttdef"><b>Definition:</b> voc.cpp:3</div></div>
+<div class="ttc" id="class_voc_html_acca3226003440162b47903f96bd6ebb0"><div class="ttname"><a href="class_voc.html#acca3226003440162b47903f96bd6ebb0">Voc::getSynonymListSize</a></div><div class="ttdeci">size_t getSynonymListSize()</div><div class="ttdoc">Gibt die Anzahl der Synonyme zurück. </div><div class="ttdef"><b>Definition:</b> voc.cpp:62</div></div>
+<div class="ttc" id="namespace_global_html_ae55c0780c34d6ea170f03dc03bd46cb0"><div class="ttname"><a href="namespace_global.html#ae55c0780c34d6ea170f03dc03bd46cb0">Global::LearningState</a></div><div class="ttdeci">LearningState</div><div class="ttdoc">Enum für die verschiedenen Lernstadien der aktuellen Vokabel. </div><div class="ttdef"><b>Definition:</b> Globals.h:32</div></div>
+<div class="ttc" id="class_voc_html_a9e45612af348eac697db60b4bacd07ed"><div class="ttname"><a href="class_voc.html#a9e45612af348eac697db60b4bacd07ed">Voc::m_qstWord</a></div><div class="ttdeci">QString m_qstWord</div><div class="ttdoc">Das Wort. </div><div class="ttdef"><b>Definition:</b> voc.h:33</div></div>
+<div class="ttc" id="class_voc_html"><div class="ttname"><a href="class_voc.html">Voc</a></div><div class="ttdoc">Speichert alle Informationen zu einer Vokabel ab  Darunter Definitionen, Synonyme, das Wort selbst, das Lernstadium und den Worttype. </div><div class="ttdef"><b>Definition:</b> voc.h:16</div></div>
+<div class="ttc" id="class_voc_html_a8ffa0f46f709799d5c46b3b0299bac2f"><div class="ttname"><a href="class_voc.html#a8ffa0f46f709799d5c46b3b0299bac2f">Voc::getLearningState</a></div><div class="ttdeci">Global::LearningState getLearningState()</div><div class="ttdoc">Gibt den aktuellen Lernstatus zurück. </div><div class="ttdef"><b>Definition:</b> voc.cpp:17</div></div>
+<div class="ttc" id="class_voc_html_a49cde75d9508feba535f4498633280d9"><div class="ttname"><a href="class_voc.html#a49cde75d9508feba535f4498633280d9">Voc::~Voc</a></div><div class="ttdeci">virtual ~Voc()</div><div class="ttdoc">Destruktor, um eine Voc-Instanz vollständig zu zerstören  Virtual aus Polymorphie Gründen...</div><div class="ttdef"><b>Definition:</b> voc.cpp:82</div></div>
+<div class="ttc" id="class_voc_html_af3005e20fb453ca42464ec11bc2272ce"><div class="ttname"><a href="class_voc.html#af3005e20fb453ca42464ec11bc2272ce">Voc::Voc</a></div><div class="ttdeci">Voc()</div><div class="ttdoc">Standard-Konstruktor, um eine Voc-Instanz zu erzeugen. </div><div class="ttdef"><b>Definition:</b> voc.cpp:78</div></div>
+<div class="ttc" id="namespace_global_html_afdb6a8644918e4e01bc89054f9fd8e3a"><div class="ttname"><a href="namespace_global.html#afdb6a8644918e4e01bc89054f9fd8e3a">Global::VocType</a></div><div class="ttdeci">VocType</div><div class="ttdoc">Enum für Vokabeln  Zeigt ob es sich bei der aktuellen Voc-Instanz um ein Wort oder Verb handelt...</div><div class="ttdef"><b>Definition:</b> Globals.h:23</div></div>
+<div class="ttc" id="class_voc_html_ac60cfd9f919c6f7a8ccc6c056dfa08ca"><div class="ttname"><a href="class_voc.html#ac60cfd9f919c6f7a8ccc6c056dfa08ca">Voc::getWord</a></div><div class="ttdeci">QString getWord()</div><div class="ttdoc">Gibt das Wort zurück. </div><div class="ttdef"><b>Definition:</b> voc.cpp:67</div></div>
+<div class="ttc" id="class_voc_html_a3c0f49b072ab43b570102cdee8798112"><div class="ttname"><a href="class_voc.html#a3c0f49b072ab43b570102cdee8798112">Voc::setWord</a></div><div class="ttdeci">void setWord(QString p_qstValue)</div><div class="ttdoc">Legt das Wort fest. </div><div class="ttdef"><b>Definition:</b> voc.cpp:72</div></div>
+<div class="ttc" id="class_voc_html_a8fe4939d3c76522443a95554c0b9218b"><div class="ttname"><a href="class_voc.html#a8fe4939d3c76522443a95554c0b9218b">Voc::setVocType</a></div><div class="ttdeci">void setVocType(Global::VocType p_ctValue)</div><div class="ttdoc">Legt den aktuellen Vokabeltyp fest. </div><div class="ttdef"><b>Definition:</b> voc.cpp:8</div></div>
+<div class="ttc" id="class_voc_html_a5ad676fad52f0979908b85a88bcce9db"><div class="ttname"><a href="class_voc.html#a5ad676fad52f0979908b85a88bcce9db">Voc::addSynonym</a></div><div class="ttdeci">void addSynonym(QString p_qstSynonym)</div><div class="ttdoc">Fügt ein Synonym hinzu. </div><div class="ttdef"><b>Definition:</b> voc.cpp:36</div></div>
+<div class="ttc" id="class_voc_html_a16bd339a21f9abdf2ae86ac5079f7d1b"><div class="ttname"><a href="class_voc.html#a16bd339a21f9abdf2ae86ac5079f7d1b">Voc::m_ctCurVoc</a></div><div class="ttdeci">Global::VocType m_ctCurVoc</div><div class="ttdoc">Der Vokabeltyp. </div><div class="ttdef"><b>Definition:</b> voc.h:38</div></div>
+<div class="ttc" id="class_voc_html_a5eaaf21a73221dbd357fab9bd718085a"><div class="ttname"><a href="class_voc.html#a5eaaf21a73221dbd357fab9bd718085a">Voc::m_mpqstSynonym</a></div><div class="ttdeci">std::vector&lt; QString &gt; m_mpqstSynonym</div><div class="ttdoc">Liste der Synonyme einer Vokabel. </div><div class="ttdef"><b>Definition:</b> voc.h:28</div></div>
+<div class="ttc" id="class_voc_html_a38913c76bf9c041ddd10d08de48de39f"><div class="ttname"><a href="class_voc.html#a38913c76bf9c041ddd10d08de48de39f">Voc::getHashCode</a></div><div class="ttdeci">QString getHashCode()</div><div class="ttdoc">Generiert einen Hashcode zum Identifizieren der aktuellen Voc-Instanz. </div><div class="ttdef"><b>Definition:</b> voc.cpp:87</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_7b6d271931df31b68347bce54d96a394.html">Owley</a></li><li class="navelem"><a class="el" href="dir_9228653442f1bf3da679077621d3c6c8.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_f95b496854a115f3eaa84795a58d87d7.html">Schule</a></li><li class="navelem"><a class="el" href="dir_9f772a310d2bccc1a59603a82e4fd4f7.html">CT</a></li><li class="navelem"><a class="el" href="dir_af0942e9c878979c44f238f2ed0e6b30.html">EasyLang</a></li><li class="navelem"><a class="el" href="dir_5aacb4125d29be1141c9fa8ecf0535a4.html">src</a></li><li class="navelem"><b>voc.h</b></li>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

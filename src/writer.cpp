@@ -126,5 +126,5 @@ void Writer::rewriteModifiedLanguageDatabases()
             rewriteModifiedLanguageDatabase(std::get<0>(mptpllangqstModifiedLanguages.at(stIndex)), std::get<1>(mptpllangqstModifiedLanguages.at(stIndex)));
         }
     }
-    catch(std::exception &e) {}
+    catch(std::exception &e) { }
 }

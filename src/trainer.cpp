@@ -20,15 +20,20 @@ Trainer::Trainer()
 {
 }
 
-void Trainer::startTraining(Language *p_langValue, int p_iSizeOfVocsToLearn)
+Trainer::~Trainer()
+{
+
+}
+
+void Trainer::startTraining(Language *p_plangValue, int p_iSizeOfVocsToLearn)
 {
     m_stCurrentIndex = 0;
     std::vector<std::tuple<Voc*, bool>> mppvocAllVocs;
-    for(size_t stLectionIndex = 0; stLectionIndex < p_langValue->getLectionListSize(); stLectionIndex++)
+    for(size_t stLectionIndex = 0; stLectionIndex < p_plangValue->getLectionListSize(); stLectionIndex++)
     {
-        for(size_t stVocIndex = 0; stVocIndex < p_langValue->getLection(stLectionIndex)->getVocListSize(); stVocIndex++)
+        for(size_t stVocIndex = 0; stVocIndex < p_plangValue->getLection(stLectionIndex)->getVocListSize(); stVocIndex++)
         {
-            mppvocAllVocs.push_back(std::make_tuple(p_langValue->getLection(stLectionIndex)->getVoc(stVocIndex), false));
+            mppvocAllVocs.push_back(std::make_tuple(p_plangValue->getLection(stLectionIndex)->getVoc(stVocIndex), false));
         }
     }
 
@@ -43,13 +48,13 @@ void Trainer::startTraining(Language *p_langValue, int p_iSizeOfVocsToLearn)
     }
 }
 
-void Trainer::startTraining(Lection *p_lectLectionToTrain, int p_iSizeOfVocsToLearn)
+void Trainer::startTraining(Lection *p_plectLectionToTrain, int p_iSizeOfVocsToLearn)
 {
     m_stCurrentIndex = 0;
     std::vector<std::tuple<Voc*, bool>> mppvocAllVocs;
-    for(size_t stVocIndex = 0; stVocIndex < p_lectLectionToTrain->getVocListSize(); stVocIndex++)
+    for(size_t stVocIndex = 0; stVocIndex < p_plectLectionToTrain->getVocListSize(); stVocIndex++)
     {
-        mppvocAllVocs.push_back(std::make_tuple(p_lectLectionToTrain->getVoc(stVocIndex), false));
+        mppvocAllVocs.push_back(std::make_tuple(p_plectLectionToTrain->getVoc(stVocIndex), false));
     }
 
     for(int iCounter = 0; iCounter < p_iSizeOfVocsToLearn; iCounter++)
@@ -65,9 +70,18 @@ void Trainer::startTraining(Lection *p_lectLectionToTrain, int p_iSizeOfVocsToLe
 
 bool Trainer::isCorrect(Voc *p_pvocCurrent, QString p_qstTry)
 {
-    for(size_t stDefinitionIndex = 0; stDefinitionIndex < p_pvocCurrent->getDefinitionListSize(); stDefinitionIndex++)
+    if(p_pvocCurrent->getVocType() == Global::VERB)
     {
-        if(p_pvocCurrent->getDefinition(stDefinitionIndex) == p_qstTry)
+        Verb *pverbCurrent = dynamic_cast<Verb*>(p_pvocCurrent);
+        if(pverbCurrent->getOnlyVerb() == p_qstTry)
+        {
+            increaseLearningState(p_pvocCurrent);
+            return true;
+        }
+    }
+    else
+    {
+        if(p_pvocCurrent->getWord() == p_qstTry)
         {
             increaseLearningState(p_pvocCurrent);
             return true;
@@ -97,6 +111,16 @@ Voc *Trainer::next()
     {
         throw e;
     }
+}
+
+QString Trainer::getRandomDefintion(Voc *p_pvocCurrent)
+{
+    try
+    {
+        size_t stRandomIndex = qrand() % (p_pvocCurrent->getDefinitionListSize());
+        return p_pvocCurrent->getDefinition(stRandomIndex);
+    }
+    catch(std::exception &e) { throw e;}
 }
 
 void Trainer::stopTraining()

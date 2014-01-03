@@ -39,28 +39,28 @@ Language::Language() : IHashable()
     
 }
 
-void Language::addLection(Lection *p_lectionValue)
+void Language::addLection(Lection *p_plectionValue)
 {
-    m_mpLection.push_back(p_lectionValue);
+    m_mpplectLection.push_back(p_plectionValue);
 }
 
 void Language::removeLection(size_t p_stIndex)
 {
-    if(p_stIndex < m_mpLection.size())
-        m_mpLection.erase(m_mpLection.begin() + p_stIndex);
+    if(p_stIndex < m_mpplectLection.size())
+        m_mpplectLection.erase(m_mpplectLection.begin() + p_stIndex);
     else
         throw std::exception();
 }
 
 Lection *Language::getLection(size_t p_stIndex)
 {
-    if(p_stIndex < m_mpLection.size())
-        return m_mpLection.at(p_stIndex);
+    if(p_stIndex < m_mpplectLection.size())
+        return m_mpplectLection.at(p_stIndex);
     else
         throw std::exception();
 }
 
 size_t Language::getLectionListSize()
 {
-    return m_mpLection.size();
+    return m_mpplectLection.size();
 }

@@ -20,6 +20,8 @@ void Verb::removeIrregularPerson(size_t p_stIndex)
 {
     if(p_stIndex < m_mpqstIrregularPerson.size())
         m_mpqstIrregularPerson.erase(m_mpqstIrregularPerson.begin() + p_stIndex);
+    else
+        throw std::exception();
 }
 
 std::vector<std::tuple<QString, QString> > Verb::getIrregularPersonsSingular()

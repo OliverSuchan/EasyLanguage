@@ -1,0 +1,25 @@
+var class_verb =
+[
+    [ "Verb", "class_verb.html#a5fc29566527f63bcb709427508b90f94", null ],
+    [ "~Verb", "class_verb.html#aadeb3be19bd813e95e55ef82ef3abd63", null ],
+    [ "addIrregularPerson", "class_verb.html#a469a7bd892344001e303287187eaa9d4", null ],
+    [ "addIrregularPersons", "class_verb.html#a2377a76e0bb5c301ca7cbdbcc5e84524", null ],
+    [ "getHashCode", "class_verb.html#a6e439cc103e26765ef62cd23d49dc869", null ],
+    [ "getIrregularConjugation", "class_verb.html#a47c09e2f8b90c40111eb57922883b9aa", null ],
+    [ "getIrregularConjugationByPronoun", "class_verb.html#acb425e293a9aac9b88298d2ff50e83ec", null ],
+    [ "getIrregularPersonsPlural", "class_verb.html#a5dfffaa04dcbd3ac477bbae13803b619", null ],
+    [ "getIrregularPersonsSingular", "class_verb.html#a372c4707bb26aedd40f691aea4595d65", null ],
+    [ "getOnlyVerb", "class_verb.html#a87d4155e42e50d859491b28372d9cac0", null ],
+    [ "getPronoun", "class_verb.html#a460122f73d0a12fd2e98557fa9d282bf", null ],
+    [ "getVerbType", "class_verb.html#aae2fc0f655f08b685c402189b7c4fd18", null ],
+    [ "getWordPostFix", "class_verb.html#adceb1e0d1cd07f7d9991db07082ab157", null ],
+    [ "getWordRoot", "class_verb.html#aa259d8a32a732ccdd00da4ad883bba27", null ],
+    [ "removeIrregularPerson", "class_verb.html#a69678c35afcb1ceb2a0cdadbd2829da4", null ],
+    [ "setVerbType", "class_verb.html#afc56df71c52ea3114f8f013a9f5a16c3", null ],
+    [ "setWordPostFix", "class_verb.html#ad09023c3a8cf4d4917b7084b25f184aa", null ],
+    [ "setWordRoot", "class_verb.html#ad30881e0c6cada591f0278b646fc7d19", null ],
+    [ "m_mpqstIrregularPerson", "class_verb.html#a34b0f8306fb6dddbf954d283d2f9732e", null ],
+    [ "m_qstWordPostFix", "class_verb.html#aceaa323c5a88869e8a27370e0c3a7725", null ],
+    [ "m_qstWordRoot", "class_verb.html#a44eff14ddc4a09c7f56f11761f4b1553", null ],
+    [ "m_vtCurVerb", "class_verb.html#a577456647f8bf848b6ba086b5d996d82", null ]
+];

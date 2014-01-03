@@ -34,11 +34,12 @@ void MainWindow::on_commandLinkButton_clicked()
 
     if(m_trnrCurrentTrainer.hasNext())
     {
-        Voc *pvocNextVoc = m_trnrCurrentTrainer.next();
-        if(pvocNextVoc->getVocType() == Global::WORD)
-            ui->label_9->setText(pvocNextVoc->getWord());
-        else
-            ui->label_9->setText(dynamic_cast<Verb*>(pvocNextVoc)->getOnlyVerb());
+       ui->label_9->setText(m_trnrCurrentTrainer.getRandomDefintion(m_trnrCurrentTrainer.next()));
+    }
+    else
+    {
+        QMessageBox::information(this, "Training vorbei", tr("Das Training ist nun vorbei und wird beendet\n"));
+        stopTraining();
     }
 }
 
@@ -67,6 +68,7 @@ void MainWindow::onParserFinished()
         ui->comboBox->addItem(LanguageManager::INSTANCE()->getLanguage(stIndex)->getLanguageName());
         ui->comboBox_3->addItem(LanguageManager::INSTANCE()->getLanguage(stIndex)->getLanguageName());
         ui->comboBox_5->addItem(LanguageManager::INSTANCE()->getLanguage(stIndex)->getLanguageName());
+        ui->comboBox_7->addItem(LanguageManager::INSTANCE()->getLanguage(stIndex)->getLanguageName());
     }
     ui->tabWidget->setEnabled(true);
 }
@@ -86,11 +88,7 @@ void MainWindow::on_commandLinkButton_4_clicked()
 
     if(m_trnrCurrentTrainer.hasNext())
     {
-        Voc *pvocNextVoc = m_trnrCurrentTrainer.next();
-        if(pvocNextVoc->getVocType() == Global::WORD)
-            ui->label_9->setText(pvocNextVoc->getWord());
-        else
-            ui->label_9->setText(dynamic_cast<Verb*>(pvocNextVoc)->getOnlyVerb());
+        ui->label_9->setText(m_trnrCurrentTrainer.getRandomDefintion(m_trnrCurrentTrainer.next()));
     }
     else
     {
@@ -255,16 +253,16 @@ void MainWindow::on_commandLinkButton_5_clicked()
             else m_pvocCreateNewVocCache->addSynonym(mpqstSynonyms.at(stSynonymIndex));
         }
     }
-    Language *langCur = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentText());
-    Lection *lectCur = langCur->getLection(ui->comboBox_6->itemData(ui->comboBox_6->currentIndex()).toInt());
+    Language *plangCur = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentText());
+    Lection *plectCur = plangCur->getLection(ui->comboBox_6->itemData(ui->comboBox_6->currentIndex()).toInt());
     if(ui->checkBox->checkState() == Qt::Checked)
     {
-        lectCur->addVoc(m_pverbCreateNewVerbCache);
+        plectCur->addVoc(m_pverbCreateNewVerbCache);
     }
     else
     {
         m_pvocCreateNewVocCache->setWord(ui->lineEdit_6->text());
-        lectCur->addVoc(m_pvocCreateNewVocCache);
+        plectCur->addVoc(m_pvocCreateNewVocCache);
     }
 }
 
@@ -280,12 +278,12 @@ void MainWindow::on_checkBox_2_stateChanged(int arg1)
         m_pverbCreateNewVerbCache->setVerbType(Global::IRREGULAR);
     }
     ui->checkBox_3->setVisible(!arg1);
-    Language *langCurrent = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentIndex());
-    for(size_t stPronounIndex = 0; stPronounIndex < langCurrent->getLanguageConjugator().getPronounListSize(); stPronounIndex++)
+    Language *plangCurrent = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentIndex());
+    for(size_t stPronounIndex = 0; stPronounIndex < plangCurrent->getLanguageConjugator().getPronounListSize(); stPronounIndex++)
     {
         QListWidgetItem *qlwiCurrentPronoun = new QListWidgetItem;
-        qlwiCurrentPronoun->setData(Qt::UserRole, QVariant(QString::number(langCurrent->getLanguageConjugator().getIsSingular(stPronounIndex))));
-        qlwiCurrentPronoun->setText(langCurrent->getLanguageConjugator().getPronoun(stPronounIndex));
+        qlwiCurrentPronoun->setData(Qt::UserRole, QVariant(QString::number(plangCurrent->getLanguageConjugator().getIsSingular(stPronounIndex))));
+        qlwiCurrentPronoun->setText(plangCurrent->getLanguageConjugator().getPronoun(stPronounIndex));
         ui->listWidget_3->addItem(qlwiCurrentPronoun);
     }
     if(ui->lineEdit_7->text() == "" || ui->lineEdit_8->text() == "")
@@ -301,9 +299,9 @@ void MainWindow::on_checkBox_2_stateChanged(int arg1)
 
 void MainWindow::on_listWidget_3_itemClicked(QListWidgetItem *item)
 {
-    Language *langCurrent = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentIndex());
+    Language *plangCurrent = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_5->currentIndex());
     ui->label_13->setText((item->data(Qt::UserRole).toString() == "1") ? ("Ja") : ("Nein"));
-    ui->lineEdit_9->setText(langCurrent->getLanguageConjugator().conjugate(item->text(), *m_pverbCreateNewVerbCache, item->data(Qt::UserRole).toBool()));
+    ui->lineEdit_9->setText(plangCurrent->getLanguageConjugator().conjugate(item->text(), *m_pverbCreateNewVerbCache, item->data(Qt::UserRole).toBool()));
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -316,4 +314,19 @@ void MainWindow::on_pushButton_4_clicked()
         }
     }
     catch(std::exception &e) { std::cerr << e.what() << std::endl;}
+}
+
+void MainWindow::on_commandLinkButton_6_clicked()
+{
+    Language *plangCurrent = new Language;
+    plangCurrent = LanguageManager::INSTANCE()->getLanguage(ui->comboBox_7->currentText());
+    Lection *plectionNewLection = new Lection;
+    plectionNewLection->setLectionNumber(ui->spinBox->value());
+    plangCurrent->addLection(plectionNewLection);
+}
+
+void MainWindow::on_comboBox_7_currentIndexChanged(const QString &arg1)
+{
+    ui->spinBox->setEnabled(true);
+    ui->commandLinkButton_6->setEnabled(true);
 }

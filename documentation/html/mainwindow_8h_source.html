@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: mainwindow.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('mainwindow_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainwindow.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MAINWINDOW_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QListWidgetItem&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QCloseEvent&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;parser.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;languagemanager.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;trainer.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;writer.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;translator.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>Ui {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_main_window.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a0624939cf4074c4e2c49be69517d0227">on_commandLinkButton_clicked</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aa7751c81eb3680b35ef2c106b9f284c4">on_comboBox_3_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ab898481d78652d28da970ced9a0751ba">on_comboBox_4_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8b67e3424d33302abcae21715c0408cc">onParserFinished</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a0a340b825c73b2ec6ae701aa49b65234">on_commandLinkButton_3_clicked</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a66897fbdad4dad0007a14f4e446dbd5b">on_commandLinkButton_4_clicked</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ad53825b1a1bdf873e1fd5eb1dbe30bc4">on_comboBox_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a9e0bafe770c37e79b949937b7a2b1c6f">on_comboBox_2_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a595970b1fa7fdb3f815dac1dc0779bd6">on_commandLinkButton_2_clicked</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a4de79c63c7fa0b8d7c468ac71f20be81">on_pushButton_clicked</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a12cf88402a93adef89645ba4e4cb7be1">on_pushButton_3_clicked</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a3d92f33698f537caa998aa1796cc9152">on_comboBox_5_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a10f74812d74bfb26e430aa6112b35f18">on_comboBox_6_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a23eb47bdb13033679ecce0fd8821aa7e">on_checkBox_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae82132e54054a8f46915e75b176baf20">on_commandLinkButton_5_clicked</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a01eed5ddb76662c139b6c58755c65d01">on_checkBox_2_stateChanged</a>(<span class="keywordtype">int</span> arg1);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a24fecf729f2081c3f72347b703e13bfc">on_listWidget_3_itemClicked</a>(QListWidgetItem *item);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#ae80a036ef40bb6ac0165471f71fef287">on_pushButton_4_clicked</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a8c47191ed11a4c8c253229d9df4802fc">on_commandLinkButton_6_clicked</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#aafaa61c6a94d35a4ab52fac35c090568">on_comboBox_7_currentIndexChanged</a>(<span class="keyword">const</span> QString &amp;arg1);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">  156</a></span>&#160;    Ui::MainWindow *<a class="code" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="class_main_window.html#a8238c38ad6a18f714123e9b39759e419">  161</a></span>&#160;    <a class="code" href="class_trainer.html">Trainer</a> <a class="code" href="class_main_window.html#a8238c38ad6a18f714123e9b39759e419">m_trnrCurrentTrainer</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a1092df0320484e4b9f7dd3a6eb2c876b">stopTraining</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425">closeEvent</a>(QCloseEvent *event);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_main_window.html#aa88e2ad525ccec53745f6cbe15c01994">  178</a></span>&#160;    <a class="code" href="class_voc.html">Voc</a> *<a class="code" href="class_main_window.html#aa88e2ad525ccec53745f6cbe15c01994">m_pvocCreateNewVocCache</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="class_main_window.html#a39cc778fc4bf086186647e705cdca735">  184</a></span>&#160;    <a class="code" href="class_verb.html">Verb</a> *<a class="code" href="class_main_window.html#a39cc778fc4bf086186647e705cdca735">m_pverbCreateNewVerbCache</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;};</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
+<div class="ttc" id="class_verb_html"><div class="ttname"><a href="class_verb.html">Verb</a></div><div class="ttdoc">Standard-Konstruktor, um eine Voc-Instanz zu erzeugen. </div><div class="ttdef"><b>Definition:</b> verb.h:17</div></div>
+<div class="ttc" id="class_main_window_html_a39cc778fc4bf086186647e705cdca735"><div class="ttname"><a href="class_main_window.html#a39cc778fc4bf086186647e705cdca735">MainWindow::m_pverbCreateNewVerbCache</a></div><div class="ttdeci">Verb * m_pverbCreateNewVerbCache</div><div class="ttdoc">Verb zum Zwischenspeichern  Wird für &quot;Wort hinzufügen&quot; benötigt. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:184</div></div>
+<div class="ttc" id="class_main_window_html_a9e0bafe770c37e79b949937b7a2b1c6f"><div class="ttname"><a href="class_main_window.html#a9e0bafe770c37e79b949937b7a2b1c6f">MainWindow::on_comboBox_2_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_2_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der zweiten ComboBox im &quot;Übersetzer&quot;-Tab geändert wird...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:138</div></div>
+<div class="ttc" id="class_main_window_html_a01eed5ddb76662c139b6c58755c65d01"><div class="ttname"><a href="class_main_window.html#a01eed5ddb76662c139b6c58755c65d01">MainWindow::on_checkBox_2_stateChanged</a></div><div class="ttdeci">void on_checkBox_2_stateChanged(int arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Status der Checkbox &quot;Regelmäßig&quot; geändert wird. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:269</div></div>
+<div class="ttc" id="class_main_window_html_a1092df0320484e4b9f7dd3a6eb2c876b"><div class="ttname"><a href="class_main_window.html#a1092df0320484e4b9f7dd3a6eb2c876b">MainWindow::stopTraining</a></div><div class="ttdeci">void stopTraining()</div><div class="ttdoc">Stoppt den Trainer und führt Änderungen an der GUI aus. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:100</div></div>
+<div class="ttc" id="class_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:20</div></div>
+<div class="ttc" id="class_main_window_html_a66897fbdad4dad0007a14f4e446dbd5b"><div class="ttname"><a href="class_main_window.html#a66897fbdad4dad0007a14f4e446dbd5b">MainWindow::on_commandLinkButton_4_clicked</a></div><div class="ttdeci">void on_commandLinkButton_4_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Überprüfen&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:81</div></div>
+<div class="ttc" id="class_main_window_html_a0624939cf4074c4e2c49be69517d0227"><div class="ttname"><a href="class_main_window.html#a0624939cf4074c4e2c49be69517d0227">MainWindow::on_commandLinkButton_clicked</a></div><div class="ttdeci">void on_commandLinkButton_clicked()</div><div class="ttdoc">Auszuführende Aktion nach dem Klicken auf den &quot;Training beginnen&quot;-Button. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:25</div></div>
+<div class="ttc" id="class_main_window_html_ae80a036ef40bb6ac0165471f71fef287"><div class="ttname"><a href="class_main_window.html#ae80a036ef40bb6ac0165471f71fef287">MainWindow::on_pushButton_4_clicked</a></div><div class="ttdeci">void on_pushButton_4_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Fertig&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:307</div></div>
+<div class="ttc" id="class_main_window_html_a4de79c63c7fa0b8d7c468ac71f20be81"><div class="ttname"><a href="class_main_window.html#a4de79c63c7fa0b8d7c468ac71f20be81">MainWindow::on_pushButton_clicked</a></div><div class="ttdeci">void on_pushButton_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Definitionen&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:176</div></div>
+<div class="ttc" id="class_main_window_html_a3d92f33698f537caa998aa1796cc9152"><div class="ttname"><a href="class_main_window.html#a3d92f33698f537caa998aa1796cc9152">MainWindow::on_comboBox_5_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_5_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der ersten ComboBox im &quot;Vokabel-Manager;Wort hinzufügen&quot;-T...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:186</div></div>
+<div class="ttc" id="class_main_window_html_a0a340b825c73b2ec6ae701aa49b65234"><div class="ttname"><a href="class_main_window.html#a0a340b825c73b2ec6ae701aa49b65234">MainWindow::on_commandLinkButton_3_clicked</a></div><div class="ttdeci">void on_commandLinkButton_3_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Training beenden&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:76</div></div>
+<div class="ttc" id="class_main_window_html_aa88e2ad525ccec53745f6cbe15c01994"><div class="ttname"><a href="class_main_window.html#aa88e2ad525ccec53745f6cbe15c01994">MainWindow::m_pvocCreateNewVocCache</a></div><div class="ttdeci">Voc * m_pvocCreateNewVocCache</div><div class="ttdoc">Vokabel zum Zwischenspeichern  Wird für &quot;Wort hinzufügen&quot; benötigt. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:178</div></div>
+<div class="ttc" id="class_main_window_html_a4e20a4a065fbb0e4d3532a45a0a91425"><div class="ttname"><a href="class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425">MainWindow::closeEvent</a></div><div class="ttdeci">void closeEvent(QCloseEvent *event)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn das Programm geschlossen werden soll. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:109</div></div>
+<div class="ttc" id="class_main_window_html_aa7751c81eb3680b35ef2c106b9f284c4"><div class="ttname"><a href="class_main_window.html#aa7751c81eb3680b35ef2c106b9f284c4">MainWindow::on_comboBox_3_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_3_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der ersten ComboBox im &quot;Trainer&quot;-Tab geändert wird...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:46</div></div>
+<div class="ttc" id="class_main_window_html_a8238c38ad6a18f714123e9b39759e419"><div class="ttname"><a href="class_main_window.html#a8238c38ad6a18f714123e9b39759e419">MainWindow::m_trnrCurrentTrainer</a></div><div class="ttdeci">Trainer m_trnrCurrentTrainer</div><div class="ttdoc">Der Trainer zum Trainieren von Vokabeln. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:161</div></div>
+<div class="ttc" id="class_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdoc">Die GUI. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:156</div></div>
+<div class="ttc" id="class_voc_html"><div class="ttname"><a href="class_voc.html">Voc</a></div><div class="ttdoc">Speichert alle Informationen zu einer Vokabel ab  Darunter Definitionen, Synonyme, das Wort selbst, das Lernstadium und den Worttype. </div><div class="ttdef"><b>Definition:</b> voc.h:16</div></div>
+<div class="ttc" id="class_main_window_html_a595970b1fa7fdb3f815dac1dc0779bd6"><div class="ttname"><a href="class_main_window.html#a595970b1fa7fdb3f815dac1dc0779bd6">MainWindow::on_commandLinkButton_2_clicked</a></div><div class="ttdeci">void on_commandLinkButton_2_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Übersetzen&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:144</div></div>
+<div class="ttc" id="class_main_window_html_a8b244be8b7b7db1b08de2a2acb9409db"><div class="ttname"><a href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=0)</div><div class="ttdoc">Konstruktor. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:4</div></div>
+<div class="ttc" id="class_main_window_html_a12cf88402a93adef89645ba4e4cb7be1"><div class="ttname"><a href="class_main_window.html#a12cf88402a93adef89645ba4e4cb7be1">MainWindow::on_pushButton_3_clicked</a></div><div class="ttdeci">void on_pushButton_3_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Synonyme&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:181</div></div>
+<div class="ttc" id="class_trainer_html"><div class="ttname"><a href="class_trainer.html">Trainer</a></div><div class="ttdoc">Trainiert die Vokabeln. </div><div class="ttdef"><b>Definition:</b> trainer.h:15</div></div>
+<div class="ttc" id="class_main_window_html_a10f74812d74bfb26e430aa6112b35f18"><div class="ttname"><a href="class_main_window.html#a10f74812d74bfb26e430aa6112b35f18">MainWindow::on_comboBox_6_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_6_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der zweiten ComboBox im &quot;Vokabel-Manager;Wort hinzufügen&quot;-...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:199</div></div>
+<div class="ttc" id="class_main_window_html_a24fecf729f2081c3f72347b703e13bfc"><div class="ttname"><a href="class_main_window.html#a24fecf729f2081c3f72347b703e13bfc">MainWindow::on_listWidget_3_itemClicked</a></div><div class="ttdeci">void on_listWidget_3_itemClicked(QListWidgetItem *item)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn ein Element des QListWidgets im &quot;Vokabel-Manager; Verb-Einstellungen...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:300</div></div>
+<div class="ttc" id="class_main_window_html_aafaa61c6a94d35a4ab52fac35c090568"><div class="ttname"><a href="class_main_window.html#aafaa61c6a94d35a4ab52fac35c090568">MainWindow::on_comboBox_7_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_7_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der ersten ComboBox im &quot;Vokabel-Manager;Lektion hinzufügen...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:328</div></div>
+<div class="ttc" id="class_main_window_html_ab898481d78652d28da970ced9a0751ba"><div class="ttname"><a href="class_main_window.html#ab898481d78652d28da970ced9a0751ba">MainWindow::on_comboBox_4_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_4_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der zweiten ComboBox im &quot;Trainer&quot;-Tab geändert wird...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:58</div></div>
+<div class="ttc" id="class_main_window_html_a23eb47bdb13033679ecce0fd8821aa7e"><div class="ttname"><a href="class_main_window.html#a23eb47bdb13033679ecce0fd8821aa7e">MainWindow::on_checkBox_stateChanged</a></div><div class="ttdeci">void on_checkBox_stateChanged(int arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Status der Checkbox &quot;Verb&quot; geändert wird. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:207</div></div>
+<div class="ttc" id="class_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">Die GUI. </div><div class="ttdef"><b>Definition:</b> mainwindow.h:24</div></div>
+<div class="ttc" id="class_main_window_html_ad53825b1a1bdf873e1fd5eb1dbe30bc4"><div class="ttname"><a href="class_main_window.html#ad53825b1a1bdf873e1fd5eb1dbe30bc4">MainWindow::on_comboBox_currentIndexChanged</a></div><div class="ttdeci">void on_comboBox_currentIndexChanged(const QString &amp;arg1)</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der Index der ersten ComboBox im &quot;Übersetzer&quot;-Tab geändert wird...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:126</div></div>
+<div class="ttc" id="class_main_window_html_ae82132e54054a8f46915e75b176baf20"><div class="ttname"><a href="class_main_window.html#ae82132e54054a8f46915e75b176baf20">MainWindow::on_commandLinkButton_5_clicked</a></div><div class="ttdeci">void on_commandLinkButton_5_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Vokabel Hinzufügen&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:224</div></div>
+<div class="ttc" id="class_main_window_html_a8c47191ed11a4c8c253229d9df4802fc"><div class="ttname"><a href="class_main_window.html#a8c47191ed11a4c8c253229d9df4802fc">MainWindow::on_commandLinkButton_6_clicked</a></div><div class="ttdeci">void on_commandLinkButton_6_clicked()</div><div class="ttdoc">Aktion die ausgeführt wird, wenn der &quot;Lektion Hinzufügen&quot;-Button geklickt wurde. </div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:319</div></div>
+<div class="ttc" id="class_main_window_html_a8b67e3424d33302abcae21715c0408cc"><div class="ttname"><a href="class_main_window.html#a8b67e3424d33302abcae21715c0408cc">MainWindow::onParserFinished</a></div><div class="ttdeci">void onParserFinished()</div><div class="ttdoc">Aktion die ausgeführt wird, sobald der Parser mit dem Parsen der Sprachdatenbanken fertig ist...</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:63</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_7b6d271931df31b68347bce54d96a394.html">Owley</a></li><li class="navelem"><a class="el" href="dir_9228653442f1bf3da679077621d3c6c8.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_f95b496854a115f3eaa84795a58d87d7.html">Schule</a></li><li class="navelem"><a class="el" href="dir_9f772a310d2bccc1a59603a82e4fd4f7.html">CT</a></li><li class="navelem"><a class="el" href="dir_af0942e9c878979c44f238f2ed0e6b30.html">EasyLang</a></li><li class="navelem"><a class="el" href="dir_5aacb4125d29be1141c9fa8ecf0535a4.html">src</a></li><li class="navelem"><b>mainwindow.h</b></li>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

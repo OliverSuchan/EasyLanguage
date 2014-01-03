@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: Klassen-Elemente - Funktionen</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Auflistung&#160;der&#160;Klassen</span></a></li>
+      <li><a href="classes.html"><span>Klassen-Verzeichnis</span></a></li>
+      <li><a href="hierarchy.html"><span>Klassenhierarchie</span></a></li>
+      <li class="current"><a href="functions.html"><span>Klassen-Elemente</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>Alle</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Funktionen</span></a></li>
+      <li><a href="functions_vars.html"><span>Variablen</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
+      <li class="current"><a href="#index_~"><span>~</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addConjugation()
+: <a class="el" href="class_conjugator.html#a2d7e2b7d315c9ed4ea715b9f08af16e9">Conjugator</a>
+</li>
+<li>addDefinition()
+: <a class="el" href="class_voc.html#a53f5bb64d6986a946efb66c928c860c6">Voc</a>
+</li>
+<li>addIrregularPerson()
+: <a class="el" href="class_verb.html#a469a7bd892344001e303287187eaa9d4">Verb</a>
+</li>
+<li>addIrregularPersons()
+: <a class="el" href="class_verb.html#a2377a76e0bb5c301ca7cbdbcc5e84524">Verb</a>
+</li>
+<li>addLanguage()
+: <a class="el" href="class_language_manager.html#a1d59f8d78b7e13bcfa703493da090511">LanguageManager</a>
+</li>
+<li>addLection()
+: <a class="el" href="class_language.html#a0fc1c1f2f078a80aeae1a3d5196ee75b">Language</a>
+</li>
+<li>addPerson()
+: <a class="el" href="class_conjugation.html#a0a33553d6282ec216276bc9b86c05038">Conjugation</a>
+</li>
+<li>addPronoun()
+: <a class="el" href="class_conjugator.html#a91183c88ec67663ed81c23956105c64c">Conjugator</a>
+</li>
+<li>addSynonym()
+: <a class="el" href="class_voc.html#a5ad676fad52f0979908b85a88bcce9db">Voc</a>
+</li>
+<li>addVoc()
+: <a class="el" href="class_lection.html#a8419ff69f9a6642d927ababf385a3fb6">Lection</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>closeEvent()
+: <a class="el" href="class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425">MainWindow</a>
+</li>
+<li>conjugate()
+: <a class="el" href="class_conjugator.html#ab8c8dfcf814e605c81017a89a95684da">Conjugator</a>
+</li>
+<li>Conjugation()
+: <a class="el" href="class_conjugation.html#aa428c72fa0455182ca5e73fb282699e9">Conjugation</a>
+</li>
+<li>Conjugator()
+: <a class="el" href="class_conjugator.html#a176ea67100c62e35f734fca2d7de54a8">Conjugator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>decreaseLearningState()
+: <a class="el" href="class_trainer.html#a4586cc4da58ba017909f5061e5bffe2d">Trainer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getConjugation()
+: <a class="el" href="class_conjugation.html#ac129e466052edd2cf7dd74f206325aa0">Conjugation</a>
+</li>
+<li>getCurrentVoc()
+: <a class="el" href="class_trainer.html#ae5e9bb338d7b2ae3a7821f9741d3f0f4">Trainer</a>
+</li>
+<li>getDefinition()
+: <a class="el" href="class_translator.html#a6467d5eb65a7a8b8868c022590687459">Translator</a>
+, <a class="el" href="class_voc.html#a9aa673c82d013b7d4dfd2024bf2bfac4">Voc</a>
+</li>
+<li>getDefinitionListSize()
+: <a class="el" href="class_translator.html#acccdb338e52ba7a9fc6378d39a9f6735">Translator</a>
+, <a class="el" href="class_voc.html#aa36fbedc1a8bbeeab4378087c78de270">Voc</a>
+</li>
+<li>getHashCode()
+: <a class="el" href="class_i_hashable.html#a9c466d95f845c28265918f0becfbcfb9">IHashable</a>
+, <a class="el" href="class_language.html#a8d7bdad859c3b0f61c7749c7f8540d8e">Language</a>
+, <a class="el" href="class_lection.html#a97298b1142d95344f994c75b808cb7b6">Lection</a>
+, <a class="el" href="class_verb.html#a6e439cc103e26765ef62cd23d49dc869">Verb</a>
+, <a class="el" href="class_voc.html#a38913c76bf9c041ddd10d08de48de39f">Voc</a>
+</li>
+<li>getHashCodeByLanguageName()
+: <a class="el" href="class_language_manager.html#a35be69607f5b2eba44c84a2814bffe63">LanguageManager</a>
+</li>
+<li>getIrregularConjugation()
+: <a class="el" href="class_verb.html#a47c09e2f8b90c40111eb57922883b9aa">Verb</a>
+</li>
+<li>getIrregularConjugationByPronoun()
+: <a class="el" href="class_verb.html#acb425e293a9aac9b88298d2ff50e83ec">Verb</a>
+</li>
+<li>getIrregularPersonsPlural()
+: <a class="el" href="class_verb.html#a5dfffaa04dcbd3ac477bbae13803b619">Verb</a>
+</li>
+<li>getIrregularPersonsSingular()
+: <a class="el" href="class_verb.html#a372c4707bb26aedd40f691aea4595d65">Verb</a>
+</li>
+<li>getIsSingular()
+: <a class="el" href="class_conjugator.html#a48ace27b0b3ca25325ea0ae1481f7fcb">Conjugator</a>
+</li>
+<li>getLanguage()
+: <a class="el" href="class_language_manager.html#ac25eefea56f8a73bcecf1aa7af48d1e2">LanguageManager</a>
+</li>
+<li>getLanguageConjugator()
+: <a class="el" href="class_language.html#aa1a884b474d9a6a1f7101962d5a6cb3c">Language</a>
+</li>
+<li>getLanguageListSize()
+: <a class="el" href="class_language_manager.html#a73e16456dc69ebe7dc1347b9c2e3e22d">LanguageManager</a>
+</li>
+<li>getLanguageName()
+: <a class="el" href="class_language.html#a04cb873e2ac05a5bad0e7c1476ee3945">Language</a>
+</li>
+<li>getLearningState()
+: <a class="el" href="class_voc.html#a8ffa0f46f709799d5c46b3b0299bac2f">Voc</a>
+</li>
+<li>getLection()
+: <a class="el" href="class_language.html#a36b2f0534b8759c1f11240595ac38870">Language</a>
+</li>
+<li>getLectionListSize()
+: <a class="el" href="class_language.html#a14e2a16e86552ffd0d275cf273820d10">Language</a>
+</li>
+<li>getLectionNumber()
+: <a class="el" href="class_lection.html#ab708b9623be559f3cc905a8b7b316d50">Lection</a>
+</li>
+<li>getModifiedLanguageDatabases()
+: <a class="el" href="class_language_manager.html#a5fb03b4f22aeaed217d25c5108241f5a">LanguageManager</a>
+</li>
+<li>getOnlyVerb()
+: <a class="el" href="class_verb.html#a87d4155e42e50d859491b28372d9cac0">Verb</a>
+</li>
+<li>getPersonListSize()
+: <a class="el" href="class_conjugation.html#afd4187b5f5518ba62e748f081084c294">Conjugation</a>
+</li>
+<li>getPostFix()
+: <a class="el" href="class_conjugation.html#a32f14a227806d567fc8d8d92509d6c22">Conjugation</a>
+</li>
+<li>getPronoun()
+: <a class="el" href="class_conjugation.html#ac91171406137626834e7ac8b517765af">Conjugation</a>
+, <a class="el" href="class_conjugator.html#a7bfc0fd6ea0124f7795e8da78cdc996d">Conjugator</a>
+, <a class="el" href="class_verb.html#a460122f73d0a12fd2e98557fa9d282bf">Verb</a>
+</li>
+<li>getPronounListSize()
+: <a class="el" href="class_conjugator.html#a92f748cff17e0197ef099af539058477">Conjugator</a>
+</li>
+<li>getRandomDefintion()
+: <a class="el" href="class_trainer.html#a22be860c709656042f5a0a01ba2eaf15">Trainer</a>
+</li>
+<li>getSynonym()
+: <a class="el" href="class_translator.html#a49b71a0eaede3853d433a746f349da15">Translator</a>
+, <a class="el" href="class_voc.html#aa0d518fda9e8dd670ab6db1aedad0f58">Voc</a>
+</li>
+<li>getSynonymListSize()
+: <a class="el" href="class_translator.html#a00b72250689ba89bc7c7a47a77e1509a">Translator</a>
+, <a class="el" href="class_voc.html#acca3226003440162b47903f96bd6ebb0">Voc</a>
+</li>
+<li>getVerbType()
+: <a class="el" href="class_verb.html#aae2fc0f655f08b685c402189b7c4fd18">Verb</a>
+</li>
+<li>getVoc()
+: <a class="el" href="class_lection.html#ab942f8ef88bcacbd8f7cee29fc824a6c">Lection</a>
+</li>
+<li>getVocListSize()
+: <a class="el" href="class_lection.html#a710e0d3a763fae9f5e1d049a08f69b7f">Lection</a>
+</li>
+<li>getVocType()
+: <a class="el" href="class_voc.html#aadf441b2773ea4ff289c113d9adba54a">Voc</a>
+</li>
+<li>getWord()
+: <a class="el" href="class_voc.html#ac60cfd9f919c6f7a8ccc6c056dfa08ca">Voc</a>
+</li>
+<li>getWordPostFix()
+: <a class="el" href="class_verb.html#adceb1e0d1cd07f7d9991db07082ab157">Verb</a>
+</li>
+<li>getWordRoot()
+: <a class="el" href="class_verb.html#aa259d8a32a732ccdd00da4ad883bba27">Verb</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>hasNext()
+: <a class="el" href="class_trainer.html#a56e46151196bc4bb0d48e93d3d7f8b26">Trainer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>increaseLearningState()
+: <a class="el" href="class_trainer.html#a619b68fa3b97aa94f52c60b535061130">Trainer</a>
+</li>
+<li>INSTANCE()
+: <a class="el" href="class_language_manager.html#a510574045f9bf6ef47aa57eacff16ddc">LanguageManager</a>
+, <a class="el" href="class_parser.html#a7242376454b1fdd6df0782d9d92cdcfb">Parser</a>
+, <a class="el" href="class_translator.html#a7f2b7baddc598adf6eabb5a4cf6dcd1b">Translator</a>
+, <a class="el" href="class_writer.html#a24b76bfb4405c545ca2a3356cc61789c">Writer</a>
+</li>
+<li>isCorrect()
+: <a class="el" href="class_trainer.html#a6e3ffcdc20265e769fe72d02e1d230d5">Trainer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>Language()
+: <a class="el" href="class_language.html#a09448361f9188bceaaeebc5576cd6896">Language</a>
+</li>
+<li>languageGotEdited()
+: <a class="el" href="class_language_manager.html#adabba2a1d05a029a12b634072b334807">LanguageManager</a>
+</li>
+<li>LanguageManager()
+: <a class="el" href="class_language_manager.html#ad9ddfaddfaf563155a959fe5a04bf89c">LanguageManager</a>
+</li>
+<li>languagesGotModified()
+: <a class="el" href="class_language_manager.html#a68847299a4007d832e25fac1a10587f3">LanguageManager</a>
+</li>
+<li>Lection()
+: <a class="el" href="class_lection.html#aea7cd802d021eba83f44ad51f6add9d8">Lection</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MainWindow()
+: <a class="el" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>next()
+: <a class="el" href="class_trainer.html#a7826da447d112f6009c6ae2a932256a7">Trainer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>on_checkBox_2_stateChanged()
+: <a class="el" href="class_main_window.html#a01eed5ddb76662c139b6c58755c65d01">MainWindow</a>
+</li>
+<li>on_checkBox_stateChanged()
+: <a class="el" href="class_main_window.html#a23eb47bdb13033679ecce0fd8821aa7e">MainWindow</a>
+</li>
+<li>on_comboBox_2_currentIndexChanged()
+: <a class="el" href="class_main_window.html#a9e0bafe770c37e79b949937b7a2b1c6f">MainWindow</a>
+</li>
+<li>on_comboBox_3_currentIndexChanged()
+: <a class="el" href="class_main_window.html#aa7751c81eb3680b35ef2c106b9f284c4">MainWindow</a>
+</li>
+<li>on_comboBox_4_currentIndexChanged()
+: <a class="el" href="class_main_window.html#ab898481d78652d28da970ced9a0751ba">MainWindow</a>
+</li>
+<li>on_comboBox_5_currentIndexChanged()
+: <a class="el" href="class_main_window.html#a3d92f33698f537caa998aa1796cc9152">MainWindow</a>
+</li>
+<li>on_comboBox_6_currentIndexChanged()
+: <a class="el" href="class_main_window.html#a10f74812d74bfb26e430aa6112b35f18">MainWindow</a>
+</li>
+<li>on_comboBox_7_currentIndexChanged()
+: <a class="el" href="class_main_window.html#aafaa61c6a94d35a4ab52fac35c090568">MainWindow</a>
+</li>
+<li>on_comboBox_currentIndexChanged()
+: <a class="el" href="class_main_window.html#ad53825b1a1bdf873e1fd5eb1dbe30bc4">MainWindow</a>
+</li>
+<li>on_commandLinkButton_2_clicked()
+: <a class="el" href="class_main_window.html#a595970b1fa7fdb3f815dac1dc0779bd6">MainWindow</a>
+</li>
+<li>on_commandLinkButton_3_clicked()
+: <a class="el" href="class_main_window.html#a0a340b825c73b2ec6ae701aa49b65234">MainWindow</a>
+</li>
+<li>on_commandLinkButton_4_clicked()
+: <a class="el" href="class_main_window.html#a66897fbdad4dad0007a14f4e446dbd5b">MainWindow</a>
+</li>
+<li>on_commandLinkButton_5_clicked()
+: <a class="el" href="class_main_window.html#ae82132e54054a8f46915e75b176baf20">MainWindow</a>
+</li>
+<li>on_commandLinkButton_6_clicked()
+: <a class="el" href="class_main_window.html#a8c47191ed11a4c8c253229d9df4802fc">MainWindow</a>
+</li>
+<li>on_commandLinkButton_clicked()
+: <a class="el" href="class_main_window.html#a0624939cf4074c4e2c49be69517d0227">MainWindow</a>
+</li>
+<li>on_listWidget_3_itemClicked()
+: <a class="el" href="class_main_window.html#a24fecf729f2081c3f72347b703e13bfc">MainWindow</a>
+</li>
+<li>on_pushButton_3_clicked()
+: <a class="el" href="class_main_window.html#a12cf88402a93adef89645ba4e4cb7be1">MainWindow</a>
+</li>
+<li>on_pushButton_4_clicked()
+: <a class="el" href="class_main_window.html#ae80a036ef40bb6ac0165471f71fef287">MainWindow</a>
+</li>
+<li>on_pushButton_clicked()
+: <a class="el" href="class_main_window.html#a4de79c63c7fa0b8d7c468ac71f20be81">MainWindow</a>
+</li>
+<li>onParserFinished()
+: <a class="el" href="class_main_window.html#a8b67e3424d33302abcae21715c0408cc">MainWindow</a>
+, <a class="el" href="class_parser.html#a059f16b2ffbe1a59df24b318b8e35379">Parser</a>
+</li>
+<li>operator=()
+: <a class="el" href="class_language_manager.html#a10da3e0d8476f3d0efa3c0560114626f">LanguageManager</a>
+, <a class="el" href="class_parser.html#a849fbb2d40ad3081883663400f214f4b">Parser</a>
+, <a class="el" href="class_translator.html#a7bb2456a12ea327282866c7586e91e40">Translator</a>
+, <a class="el" href="class_writer.html#a9a8c65adda5b378e7797b457926bdc57">Writer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>parseConjugationDataBase()
+: <a class="el" href="class_parser.html#a68c0c7bf204d66d8b4ec27dbb88093e6">Parser</a>
+</li>
+<li>parseLanguageDataBase()
+: <a class="el" href="class_parser.html#ade2acaa30de6e06a4751104ac84f2a04">Parser</a>
+</li>
+<li>parseLanguageDatabases()
+: <a class="el" href="class_parser.html#a47bc7b8842a8e6b919b8a98effced4ab">Parser</a>
+</li>
+<li>Parser()
+: <a class="el" href="class_parser.html#ae1a7a727ecebde3c4019b71b57847ee7">Parser</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>removeConjugation()
+: <a class="el" href="class_conjugator.html#a39e1b7f67c2e1a71dbc4dfb0a1db286c">Conjugator</a>
+</li>
+<li>removeIrregularPerson()
+: <a class="el" href="class_verb.html#a69678c35afcb1ceb2a0cdadbd2829da4">Verb</a>
+</li>
+<li>removeLanguage()
+: <a class="el" href="class_language_manager.html#ac74313a3cc128c5a34091bc6e1b10e84">LanguageManager</a>
+</li>
+<li>removeLection()
+: <a class="el" href="class_language.html#acb0604fa08f8d7d377c0accc8be6008c">Language</a>
+</li>
+<li>removePerson()
+: <a class="el" href="class_conjugation.html#a94c5bc13427e871dc28d3219d5f87e70">Conjugation</a>
+</li>
+<li>removeVoc()
+: <a class="el" href="class_lection.html#a0eb4f255632d9e7972d6783ed3e60038">Lection</a>
+</li>
+<li>rewriteModifiedLanguageDatabase()
+: <a class="el" href="class_writer.html#af43ee3abf698b6b808bdb030a86d135e">Writer</a>
+</li>
+<li>rewriteModifiedLanguageDatabases()
+: <a class="el" href="class_writer.html#a573804a50055d35c5a66a366cdd28041">Writer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>setLanguageConjugator()
+: <a class="el" href="class_language.html#aa23e5b5387ae54be0856bab888b65900">Language</a>
+</li>
+<li>setLanguageName()
+: <a class="el" href="class_language.html#a44e1e34f1c18d3e050a7c806966e9455">Language</a>
+</li>
+<li>setLearningState()
+: <a class="el" href="class_voc.html#a529cdf25d702959888a8e9f0dcc33a20">Voc</a>
+</li>
+<li>setLectionNumber()
+: <a class="el" href="class_lection.html#a1d902bd8db1da9ab078067edd1980be0">Lection</a>
+</li>
+<li>setPostFix()
+: <a class="el" href="class_conjugation.html#a33eefe6c6fcfc7131ede464c8552b28f">Conjugation</a>
+</li>
+<li>setVerbType()
+: <a class="el" href="class_verb.html#afc56df71c52ea3114f8f013a9f5a16c3">Verb</a>
+</li>
+<li>setVocType()
+: <a class="el" href="class_voc.html#a8fe4939d3c76522443a95554c0b9218b">Voc</a>
+</li>
+<li>setWord()
+: <a class="el" href="class_voc.html#a3c0f49b072ab43b570102cdee8798112">Voc</a>
+</li>
+<li>setWordPostFix()
+: <a class="el" href="class_verb.html#ad09023c3a8cf4d4917b7084b25f184aa">Verb</a>
+</li>
+<li>setWordRoot()
+: <a class="el" href="class_verb.html#ad30881e0c6cada591f0278b646fc7d19">Verb</a>
+</li>
+<li>startTraining()
+: <a class="el" href="class_trainer.html#a59a319c540bf3f8a21b1066326f573aa">Trainer</a>
+</li>
+<li>stopTraining()
+: <a class="el" href="class_main_window.html#a1092df0320484e4b9f7dd3a6eb2c876b">MainWindow</a>
+, <a class="el" href="class_trainer.html#a98fdfe33ca4e603222a5f84c5eb54b74">Trainer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>Trainer()
+: <a class="el" href="class_trainer.html#a62bab4c92f18610f095e5692ba098efe">Trainer</a>
+</li>
+<li>translate()
+: <a class="el" href="class_translator.html#aa22db27afce48b33113a99726360755a">Translator</a>
+</li>
+<li>Translator()
+: <a class="el" href="class_translator.html#aa4dfde53a0baa33e93637f00fd0d0a5a">Translator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>Verb()
+: <a class="el" href="class_verb.html#a5fc29566527f63bcb709427508b90f94">Verb</a>
+</li>
+<li>Voc()
+: <a class="el" href="class_voc.html#af3005e20fb453ca42464ec11bc2272ce">Voc</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>Writer()
+: <a class="el" href="class_writer.html#aedc04cd5fb7b4b99d3ad906fef2116ce">Writer</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
+<li>~Conjugation()
+: <a class="el" href="class_conjugation.html#a1235f58f179cb840a12427e05e214019">Conjugation</a>
+</li>
+<li>~Conjugator()
+: <a class="el" href="class_conjugator.html#a0f40816b6f1ffee8fab57acfb35308ba">Conjugator</a>
+</li>
+<li>~Language()
+: <a class="el" href="class_language.html#a1e78a8e5c6383032a157eef5b08ca942">Language</a>
+</li>
+<li>~LanguageManager()
+: <a class="el" href="class_language_manager.html#ade9ee45cad140d9ea37cd99a9c5c83df">LanguageManager</a>
+</li>
+<li>~Lection()
+: <a class="el" href="class_lection.html#a2ee8956aa592dd783b1043de60959754">Lection</a>
+</li>
+<li>~MainWindow()
+: <a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow</a>
+</li>
+<li>~Parser()
+: <a class="el" href="class_parser.html#a3e658b5917a93a3ef648050d060e3a93">Parser</a>
+</li>
+<li>~Trainer()
+: <a class="el" href="class_trainer.html#aa3d993d1eb090f4111e12a710fe9d3f6">Trainer</a>
+</li>
+<li>~Translator()
+: <a class="el" href="class_translator.html#a9c262ba866126a6a35e979a64d7e3518">Translator</a>
+</li>
+<li>~Verb()
+: <a class="el" href="class_verb.html#aadeb3be19bd813e95e55ef82ef3abd63">Verb</a>
+</li>
+<li>~Voc()
+: <a class="el" href="class_voc.html#a49cde75d9508feba535f4498633280d9">Voc</a>
+</li>
+<li>~Writer()
+: <a class="el" href="class_writer.html#a6f57399b94731301d267ce10a2f52ea3">Writer</a>
+</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

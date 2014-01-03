@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: conjugator.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('conjugator_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">conjugator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONJUGATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CONJUGATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;verb.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;conjugation.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_conjugator.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_conjugator.html">Conjugator</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_conjugator.html#a04aaedb08e8bbc15917861c92bc56262">   22</a></span>&#160;    std::vector&lt;Conjugation&gt; <a class="code" href="class_conjugator.html#a04aaedb08e8bbc15917861c92bc56262">m_mpcnConjugation</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_conjugator.html#a99b485da7e10b809d9e2f6663bed2e90">   28</a></span>&#160;    std::vector&lt;std::tuple&lt;QString, bool&gt;&gt; <a class="code" href="class_conjugator.html#a99b485da7e10b809d9e2f6663bed2e90">m_mptplqstbPronoun</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjugator.html#a91183c88ec67663ed81c23956105c64c">addPronoun</a>(QString p_qstPronoun, <span class="keywordtype">bool</span> p_bIsSingular);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjugator.html#a2d7e2b7d315c9ed4ea715b9f08af16e9">addConjugation</a>(QString p_qstPostFix, QString p_qstPronoun, QString p_qstConjugation, <span class="keywordtype">bool</span> p_bIsSingular);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_conjugator.html#a39e1b7f67c2e1a71dbc4dfb0a1db286c">removeConjugation</a>(QString p_qstPostFix);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_conjugator.html#a48ace27b0b3ca25325ea0ae1481f7fcb">getIsSingular</a>(<span class="keywordtype">size_t</span> p_stIndex);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QString <a class="code" href="class_conjugator.html#ab8c8dfcf814e605c81017a89a95684da">conjugate</a>(QString p_qstPronoun, <a class="code" href="class_verb.html">Verb</a> p_verbVerb, <span class="keywordtype">bool</span> p_bIsSingular);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QString <a class="code" href="class_conjugator.html#a7bfc0fd6ea0124f7795e8da78cdc996d">getPronoun</a>(<span class="keywordtype">size_t</span> p_stIndex);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_conjugator.html#a92f748cff17e0197ef099af539058477">getPronounListSize</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_conjugator.html#a176ea67100c62e35f734fca2d7de54a8">Conjugator</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_conjugator.html#a0f40816b6f1ffee8fab57acfb35308ba">~Conjugator</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif // CONJUGATOR_H</span></div>
+<div class="ttc" id="class_conjugator_html_a0f40816b6f1ffee8fab57acfb35308ba"><div class="ttname"><a href="class_conjugator.html#a0f40816b6f1ffee8fab57acfb35308ba">Conjugator::~Conjugator</a></div><div class="ttdeci">~Conjugator()</div><div class="ttdoc">Standard-Destruktor, um eine Conjugator-Instanz vollständig zu zerstören. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:90</div></div>
+<div class="ttc" id="class_conjugator_html_a92f748cff17e0197ef099af539058477"><div class="ttname"><a href="class_conjugator.html#a92f748cff17e0197ef099af539058477">Conjugator::getPronounListSize</a></div><div class="ttdeci">size_t getPronounListSize()</div><div class="ttdoc">Gibt die Größe der Pronomen-Liste zurück. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:81</div></div>
+<div class="ttc" id="class_verb_html"><div class="ttname"><a href="class_verb.html">Verb</a></div><div class="ttdoc">Standard-Konstruktor, um eine Voc-Instanz zu erzeugen. </div><div class="ttdef"><b>Definition:</b> verb.h:17</div></div>
+<div class="ttc" id="class_conjugator_html_a04aaedb08e8bbc15917861c92bc56262"><div class="ttname"><a href="class_conjugator.html#a04aaedb08e8bbc15917861c92bc56262">Conjugator::m_mpcnConjugation</a></div><div class="ttdeci">std::vector&lt; Conjugation &gt; m_mpcnConjugation</div><div class="ttdoc">Ein Vektor mit allen Konjugationen für eine bestimmte Sprache. </div><div class="ttdef"><b>Definition:</b> conjugator.h:22</div></div>
+<div class="ttc" id="class_conjugator_html_a2d7e2b7d315c9ed4ea715b9f08af16e9"><div class="ttname"><a href="class_conjugator.html#a2d7e2b7d315c9ed4ea715b9f08af16e9">Conjugator::addConjugation</a></div><div class="ttdeci">void addConjugation(QString p_qstPostFix, QString p_qstPronoun, QString p_qstConjugation, bool p_bIsSingular)</div><div class="ttdoc">Fügt eine Konjugation zum Conjugation-Vektor hinzu. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:13</div></div>
+<div class="ttc" id="class_conjugator_html_a91183c88ec67663ed81c23956105c64c"><div class="ttname"><a href="class_conjugator.html#a91183c88ec67663ed81c23956105c64c">Conjugator::addPronoun</a></div><div class="ttdeci">void addPronoun(QString p_qstPronoun, bool p_bIsSingular)</div><div class="ttdoc">Fügt ein Pronomen mit einer Singular oder Plural Eigenschaft zum Pronomen-Vektor hinzu. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:3</div></div>
+<div class="ttc" id="class_conjugator_html_a176ea67100c62e35f734fca2d7de54a8"><div class="ttname"><a href="class_conjugator.html#a176ea67100c62e35f734fca2d7de54a8">Conjugator::Conjugator</a></div><div class="ttdeci">Conjugator()</div><div class="ttdoc">Standard-Konstruktor, um eine Conjugator-Instanz zu erzeugen. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:86</div></div>
+<div class="ttc" id="class_conjugator_html_a99b485da7e10b809d9e2f6663bed2e90"><div class="ttname"><a href="class_conjugator.html#a99b485da7e10b809d9e2f6663bed2e90">Conjugator::m_mptplqstbPronoun</a></div><div class="ttdeci">std::vector&lt; std::tuple&lt; QString, bool &gt; &gt; m_mptplqstbPronoun</div><div class="ttdoc">Ein Vektor aus Pronomen und einem Boolean der angibt ob das jeweilige Pronomen Singular oder Plural i...</div><div class="ttdef"><b>Definition:</b> conjugator.h:28</div></div>
+<div class="ttc" id="class_conjugator_html_a7bfc0fd6ea0124f7795e8da78cdc996d"><div class="ttname"><a href="class_conjugator.html#a7bfc0fd6ea0124f7795e8da78cdc996d">Conjugator::getPronoun</a></div><div class="ttdeci">QString getPronoun(size_t p_stIndex)</div><div class="ttdoc">Gibt das Pronomen an einer bestimmten Stelle zurück. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:73</div></div>
+<div class="ttc" id="class_conjugator_html_ab8c8dfcf814e605c81017a89a95684da"><div class="ttname"><a href="class_conjugator.html#ab8c8dfcf814e605c81017a89a95684da">Conjugator::conjugate</a></div><div class="ttdeci">QString conjugate(QString p_qstPronoun, Verb p_verbVerb, bool p_bIsSingular)</div><div class="ttdoc">Konjugiert ein Verb. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:48</div></div>
+<div class="ttc" id="class_conjugator_html_a48ace27b0b3ca25325ea0ae1481f7fcb"><div class="ttname"><a href="class_conjugator.html#a48ace27b0b3ca25325ea0ae1481f7fcb">Conjugator::getIsSingular</a></div><div class="ttdeci">bool getIsSingular(size_t p_stIndex)</div><div class="ttdoc">Gibt zurück ob die Person an einem spezifischen Index Singular oder Plural ist. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:43</div></div>
+<div class="ttc" id="class_conjugator_html"><div class="ttname"><a href="class_conjugator.html">Conjugator</a></div><div class="ttdoc">Konjugiert Verben, bei zur Hilfenahme von Conjugation. </div><div class="ttdef"><b>Definition:</b> conjugator.h:15</div></div>
+<div class="ttc" id="class_conjugator_html_a39e1b7f67c2e1a71dbc4dfb0a1db286c"><div class="ttname"><a href="class_conjugator.html#a39e1b7f67c2e1a71dbc4dfb0a1db286c">Conjugator::removeConjugation</a></div><div class="ttdeci">void removeConjugation(QString p_qstPostFix)</div><div class="ttdoc">Löscht eine Konjugation aus dem Conjugation-Vektor. </div><div class="ttdef"><b>Definition:</b> conjugator.cpp:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_7b6d271931df31b68347bce54d96a394.html">Owley</a></li><li class="navelem"><a class="el" href="dir_9228653442f1bf3da679077621d3c6c8.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_f95b496854a115f3eaa84795a58d87d7.html">Schule</a></li><li class="navelem"><a class="el" href="dir_9f772a310d2bccc1a59603a82e4fd4f7.html">CT</a></li><li class="navelem"><a class="el" href="dir_af0942e9c878979c44f238f2ed0e6b30.html">EasyLang</a></li><li class="navelem"><a class="el" href="dir_5aacb4125d29be1141c9fa8ecf0535a4.html">src</a></li><li class="navelem"><b>conjugator.h</b></li>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

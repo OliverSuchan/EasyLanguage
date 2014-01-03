@@ -29,7 +29,7 @@
    <enum>Qt::NoFocus</enum>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>EasyLanguage</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../resources/images.qrc">
@@ -106,7 +106,7 @@
      <enum>QTabWidget::North</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <property name="documentMode">
      <bool>false</bool>
@@ -508,11 +508,11 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
-        <string>Hinzufügen</string>
+        <string>Wort hinzufügen</string>
        </attribute>
        <widget class="QComboBox" name="comboBox_5">
         <property name="geometry">
@@ -621,7 +621,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Hinzufügen</string>
+         <string>Vokabel Hinzufügen</string>
         </property>
         <property name="autoDefault">
          <bool>true</bool>
@@ -824,6 +824,72 @@
         </property>
         <property name="text">
          <string>Unregelmäßig</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Lektion hinzufügen</string>
+       </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>60</y>
+          <width>151</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lektionsnummer:</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>90</y>
+          <width>151</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>-345345345</number>
+        </property>
+        <property name="maximum">
+         <number>345345345</number>
+        </property>
+       </widget>
+       <widget class="QCommandLinkButton" name="commandLinkButton_6">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>361</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lektion Hinzufügen</string>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_7">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>151</width>
+          <height>22</height>
+         </rect>
         </property>
        </widget>
       </widget>

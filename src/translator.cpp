@@ -28,13 +28,13 @@ Translator *Translator::INSTANCE()
     return s_pTranslatorInstance;
 }
 
-std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(Language *p_langValue, QString p_qstWord)
+std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(Language *p_plangValue, QString p_qstWord)
 {
     std::tuple<std::vector<QString>, std::vector<QString>> tplmpqstWordInformations = std::make_tuple(std::vector<QString>(), std::vector<QString>());
-    for(size_t stIndexLection = 0; stIndexLection < p_langValue->getLectionListSize(); stIndexLection++)
+    for(size_t stIndexLection = 0; stIndexLection < p_plangValue->getLectionListSize(); stIndexLection++)
     {
         Lection *lectCurrent = new Lection;
-        lectCurrent = p_langValue->getLection(stIndexLection);
+        lectCurrent = p_plangValue->getLection(stIndexLection);
         for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent->getVocListSize(); stIndexVoc++)
         {
             Voc *vocCurrent = lectCurrent->getVoc(stIndexVoc);
@@ -55,14 +55,14 @@ std::tuple<std::vector<QString>, std::vector<QString> > Translator::translate(La
     throw std::exception();
 }
 
-std::vector<QString> Translator::translate(Language *p_langValueFrom, Language *p_langValueInto, QString p_qstWord)
+std::vector<QString> Translator::translate(Language *p_plangValueFrom, Language *p_plangValueInto, QString p_qstWord)
 {
-    std::tuple<std::vector<QString>, std::vector<QString>> tplmpqstFirstLanguage = translate(p_langValueFrom, p_qstWord);
+    std::tuple<std::vector<QString>, std::vector<QString>> tplmpqstFirstLanguage = translate(p_plangValueFrom, p_qstWord);
     std::vector<QString> mpqstTranslation;
-    for(size_t stIndexLection = 0; stIndexLection < p_langValueInto->getLectionListSize(); stIndexLection++)
+    for(size_t stIndexLection = 0; stIndexLection < p_plangValueInto->getLectionListSize(); stIndexLection++)
     {
         Lection *lectCurrent = new Lection;
-        lectCurrent = p_langValueInto->getLection(stIndexLection);
+        lectCurrent = p_plangValueInto->getLection(stIndexLection);
         for(size_t stIndexVoc = 0; stIndexVoc < lectCurrent->getVocListSize(); stIndexVoc++)
         {
             Voc *vocCurrent = lectCurrent->getVoc(stIndexVoc);

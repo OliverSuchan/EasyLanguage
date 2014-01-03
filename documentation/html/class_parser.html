@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: Parser Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Auflistung&#160;der&#160;Klassen</span></a></li>
+      <li><a href="classes.html"><span>Klassen-Verzeichnis</span></a></li>
+      <li><a href="hierarchy.html"><span>Klassenhierarchie</span></a></li>
+      <li><a href="functions.html"><span>Klassen-Elemente</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_parser.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#signals">Signale</a> &#124;
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
+<a href="#pri-methods">Private Methoden</a> &#124;
+<a href="#pri-static-attribs">Statische, private Attribute</a> &#124;
+<a href="class_parser-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle">
+<div class="title">Parser Klassenreferenz</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Parst alle Sprachdatenbanken und deren dazu gehörige Konjugationstabelle<br/>
+ Benutzt das Singleton-Design.  
+ <a href="class_parser.html#details">Mehr ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für Parser:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_parser.png" usemap="#Parser_map" alt=""/>
+  <map id="Parser_map" name="Parser_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signale</h2></td></tr>
+<tr class="memitem:a059f16b2ffbe1a59df24b318b8e35379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a059f16b2ffbe1a59df24b318b8e35379"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a059f16b2ffbe1a59df24b318b8e35379">onParserFinished</a> ()</td></tr>
+<tr class="memdesc:a059f16b2ffbe1a59df24b318b8e35379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal das emittiert wird, sobald der <a class="el" href="class_parser.html" title="Parst alle Sprachdatenbanken und deren dazu gehörige Konjugationstabelle  Benutzt das Singleton-Desig...">Parser</a> mit dem Parsen fertig ist. <br/></td></tr>
+<tr class="separator:a059f16b2ffbe1a59df24b318b8e35379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a47bc7b8842a8e6b919b8a98effced4ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47bc7b8842a8e6b919b8a98effced4ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a47bc7b8842a8e6b919b8a98effced4ab">parseLanguageDatabases</a> ()</td></tr>
+<tr class="memdesc:a47bc7b8842a8e6b919b8a98effced4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst alle Sprachdatenbanken in {aktuelles Verzeichnis}/languages<br/>
+ Sprachdatenbanken brauchen die Endung ".xml"<br/>
+ Sobald eine Sprachdatenbank gefunden wurde, wird nach einer Konjugationtabelle<br/>
+ mit dem Namen der Sprachdatenbank ausschau gehalten<br/>
+ Konjugationstabellen benötigen die Endung ".cjt". <br/></td></tr>
+<tr class="separator:a47bc7b8842a8e6b919b8a98effced4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Öffentliche, statische Methoden</h2></td></tr>
+<tr class="memitem:a7242376454b1fdd6df0782d9d92cdcfb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_parser.html">Parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a7242376454b1fdd6df0782d9d92cdcfb">INSTANCE</a> ()</td></tr>
+<tr class="memdesc:a7242376454b1fdd6df0782d9d92cdcfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liefert die Singleton-Instanz.  <a href="#a7242376454b1fdd6df0782d9d92cdcfb">Mehr ...</a><br/></td></tr>
+<tr class="separator:a7242376454b1fdd6df0782d9d92cdcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:a68c0c7bf204d66d8b4ec27dbb88093e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_conjugator.html">Conjugator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a68c0c7bf204d66d8b4ec27dbb88093e6">parseConjugationDataBase</a> (QString p_qstFileName)</td></tr>
+<tr class="memdesc:a68c0c7bf204d66d8b4ec27dbb88093e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst eine Konjugationstabelle<br/>
+ Wird automatisch aufgerufen.  <a href="#a68c0c7bf204d66d8b4ec27dbb88093e6">Mehr ...</a><br/></td></tr>
+<tr class="separator:a68c0c7bf204d66d8b4ec27dbb88093e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2acaa30de6e06a4751104ac84f2a04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_language.html">Language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ade2acaa30de6e06a4751104ac84f2a04">parseLanguageDataBase</a> (QString p_qstFileName)</td></tr>
+<tr class="memdesc:ade2acaa30de6e06a4751104ac84f2a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst eine Sprach-Datenbank<br/>
+ Wird automatischa aufgerufen.  <a href="#ade2acaa30de6e06a4751104ac84f2a04">Mehr ...</a><br/></td></tr>
+<tr class="separator:ade2acaa30de6e06a4751104ac84f2a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a7a727ecebde3c4019b71b57847ee7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ae1a7a727ecebde3c4019b71b57847ee7">Parser</a> (QObject *p_pqoParent=0)</td></tr>
+<tr class="memdesc:ae1a7a727ecebde3c4019b71b57847ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor<br/>
+ private da es ein Singleton ist.  <a href="#ae1a7a727ecebde3c4019b71b57847ee7">Mehr ...</a><br/></td></tr>
+<tr class="separator:ae1a7a727ecebde3c4019b71b57847ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e658b5917a93a3ef648050d060e3a93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e658b5917a93a3ef648050d060e3a93"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a3e658b5917a93a3ef648050d060e3a93">~Parser</a> ()</td></tr>
+<tr class="memdesc:a3e658b5917a93a3ef648050d060e3a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor<br/>
+ private da es ein Singleton ist. <br/></td></tr>
+<tr class="separator:a3e658b5917a93a3ef648050d060e3a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66cd88a858843746da7c80b9c64ee098"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66cd88a858843746da7c80b9c64ee098"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a66cd88a858843746da7c80b9c64ee098">Parser</a> (<a class="el" href="class_parser.html">Parser</a> const &amp;)</td></tr>
+<tr class="memdesc:a66cd88a858843746da7c80b9c64ee098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard-Kopierkonstruktor<br/>
+ private da es ein Singleton ist. <br/></td></tr>
+<tr class="separator:a66cd88a858843746da7c80b9c64ee098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849fbb2d40ad3081883663400f214f4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parser.html">Parser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a849fbb2d40ad3081883663400f214f4b">operator=</a> (<a class="el" href="class_parser.html">Parser</a> const &amp;)</td></tr>
+<tr class="memdesc:a849fbb2d40ad3081883663400f214f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überladener Zuweisungsoperator<br/>
+ private da es ein Singleton ist.  <a href="#a849fbb2d40ad3081883663400f214f4b">Mehr ...</a><br/></td></tr>
+<tr class="separator:a849fbb2d40ad3081883663400f214f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:a000a477c90b8698731852bdb63afe752"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_parser.html">Parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a000a477c90b8698731852bdb63afe752">m_pInstance</a> = new <a class="el" href="class_parser.html">Parser</a></td></tr>
+<tr class="memdesc:a000a477c90b8698731852bdb63afe752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parser-Singleton-Instanz.  <a href="#a000a477c90b8698731852bdb63afe752">Mehr ...</a><br/></td></tr>
+<tr class="separator:a000a477c90b8698731852bdb63afe752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Parst alle Sprachdatenbanken und deren dazu gehörige Konjugationstabelle<br/>
+ Benutzt das Singleton-Design. </p>
+</div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a class="anchor" id="ae1a7a727ecebde3c4019b71b57847ee7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Parser::Parser </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>p_pqoParent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konstruktor<br/>
+ private da es ein Singleton ist. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_pqoParent</td><td>Default-Parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a class="anchor" id="a7242376454b1fdd6df0782d9d92cdcfb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parser.html">Parser</a> * Parser::INSTANCE </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Liefert die Singleton-Instanz. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Parser-Singleton-Instanz </dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_parser.html" title="Parst alle Sprachdatenbanken und deren dazu gehörige Konjugationstabelle  Benutzt das Singleton-Desig...">Parser</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a849fbb2d40ad3081883663400f214f4b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parser.html">Parser</a> &amp; Parser::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parser.html">Parser</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Überladener Zuweisungsoperator<br/>
+ private da es ein Singleton ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Zugewiesene Parser-Instanz </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a68c0c7bf204d66d8b4ec27dbb88093e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_conjugator.html">Conjugator</a> Parser::parseConjugationDataBase </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>p_qstFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parst eine Konjugationstabelle<br/>
+ Wird automatisch aufgerufen. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>parseConjugationDataBases() </dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_qstFileName</td><td>Dateiname der zu parsenden Konjugationstabelle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Konjugierer der den geparsten Eigenschaften entspricht </dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_conjugator.html" title="Konjugiert Verben, bei zur Hilfenahme von Conjugation. ">Conjugator</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ade2acaa30de6e06a4751104ac84f2a04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_language.html">Language</a> * Parser::parseLanguageDataBase </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>p_qstFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parst eine Sprach-Datenbank<br/>
+ Wird automatischa aufgerufen. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd>parseConjugationDataBases() </dd></dl>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_qstFileName</td><td>Dateiname der zu parsenden Sprach-Datenbank </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Sprache die den geparsten Eigenschaften entspricht </dd></dl>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_language.html" title="Speichert alle Informationen für eine geparste Sprache. ">Language</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a class="anchor" id="a000a477c90b8698731852bdb63afe752"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parser.html">Parser</a> * Parser::m_pInstance = new <a class="el" href="class_parser.html">Parser</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parser-Singleton-Instanz. </p>
+<dl class="section see"><dt>Siehe auch</dt><dd><a class="el" href="class_parser.html" title="Parst alle Sprachdatenbanken und deren dazu gehörige Konjugationstabelle  Benutzt das Singleton-Desig...">Parser</a> </dd></dl>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li><a class="el" href="parser_8h_source.html">parser.h</a></li>
+<li>parser.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_parser.html">Parser</a></li>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

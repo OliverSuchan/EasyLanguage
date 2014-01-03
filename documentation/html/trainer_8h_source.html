@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>EasyLanguage: trainer.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="erwer.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">EasyLanguage
+   </div>
+   <div id="projectbrief">Copyright by Simon Thomann und Oliver Suchan</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li><a href="namespaces.html"><span>Namensbereiche</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('trainer_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Alle</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klassen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namensbereiche</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funktionen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variablen</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Aufzählungen</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">trainer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TRAINER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TRAINER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Globals.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;language.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;lection.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;voc.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_trainer.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_trainer.html">Trainer</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_trainer.html#a5d85fcf026570d902a88742ed0af65da">   22</a></span>&#160;    std::vector&lt;Voc*&gt; <a class="code" href="class_trainer.html#a5d85fcf026570d902a88742ed0af65da">m_mppvocVocToTrain</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_trainer.html#a5e49ff2c6e77029427eb87803b41c6bc">   27</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_trainer.html#a5e49ff2c6e77029427eb87803b41c6bc">m_stCurrentIndex</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_trainer.html#a619b68fa3b97aa94f52c60b535061130">increaseLearningState</a>(<a class="code" href="class_voc.html">Voc</a> *p_pvocCurrent);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_trainer.html#a4586cc4da58ba017909f5061e5bffe2d">decreaseLearningState</a>(<a class="code" href="class_voc.html">Voc</a> *p_pvocCurrent);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_trainer.html#af98cfa31ad40e6ceae211350cea593b7">   44</a></span>&#160;    <a class="code" href="class_voc.html">Voc</a> *<a class="code" href="class_trainer.html#af98cfa31ad40e6ceae211350cea593b7">m_pvocCurrentVoc</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_trainer.html#a62bab4c92f18610f095e5692ba098efe">Trainer</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_trainer.html#aa3d993d1eb090f4111e12a710fe9d3f6">~Trainer</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_trainer.html#a20b2b5b262e5fdc455d010f88d71e227">startTraining</a>(<a class="code" href="class_language.html">Language</a> *p_plangValue, <span class="keywordtype">int</span> p_iSizeOfVocsToLearn);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_trainer.html#a20b2b5b262e5fdc455d010f88d71e227">startTraining</a>(<a class="code" href="class_lection.html">Lection</a> *p_plectLectionToTrain, <span class="keywordtype">int</span> p_iSizeOfVocsToLearn);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_trainer.html#a6e3ffcdc20265e769fe72d02e1d230d5">isCorrect</a>(<a class="code" href="class_voc.html">Voc</a> *p_pvocCurrent, QString p_qstTry);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_trainer.html#a56e46151196bc4bb0d48e93d3d7f8b26">hasNext</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_voc.html">Voc</a>* <a class="code" href="class_trainer.html#a7826da447d112f6009c6ae2a932256a7">next</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    QString <a class="code" href="class_trainer.html#a22be860c709656042f5a0a01ba2eaf15">getRandomDefintion</a>(<a class="code" href="class_voc.html">Voc</a> *p_vpocCurrent);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_trainer.html#a98fdfe33ca4e603222a5f84c5eb54b74">stopTraining</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="class_voc.html">Voc</a> *<a class="code" href="class_trainer.html#ae5e9bb338d7b2ae3a7821f9741d3f0f4">getCurrentVoc</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif // TRAINER_H</span></div>
+<div class="ttc" id="class_trainer_html_a7826da447d112f6009c6ae2a932256a7"><div class="ttname"><a href="class_trainer.html#a7826da447d112f6009c6ae2a932256a7">Trainer::next</a></div><div class="ttdeci">Voc * next()</div><div class="ttdoc">Liefert die nächste Vokabel die trainiert wird  Zähler wird automatisch hochgesetzt. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:103</div></div>
+<div class="ttc" id="class_trainer_html_a619b68fa3b97aa94f52c60b535061130"><div class="ttname"><a href="class_trainer.html#a619b68fa3b97aa94f52c60b535061130">Trainer::increaseLearningState</a></div><div class="ttdeci">void increaseLearningState(Voc *p_pvocCurrent)</div><div class="ttdoc">Wird aufgerufen sobald der Nutzer eine Vokabel richtig hat. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:3</div></div>
+<div class="ttc" id="class_trainer_html_a6e3ffcdc20265e769fe72d02e1d230d5"><div class="ttname"><a href="class_trainer.html#a6e3ffcdc20265e769fe72d02e1d230d5">Trainer::isCorrect</a></div><div class="ttdeci">bool isCorrect(Voc *p_pvocCurrent, QString p_qstTry)</div><div class="ttdoc">Überprüft ob die getätigte Eingabe richtig ist  Wenn korrekt, wird automatisch der Lernstatus verbess...</div><div class="ttdef"><b>Definition:</b> trainer.cpp:71</div></div>
+<div class="ttc" id="class_trainer_html_a4586cc4da58ba017909f5061e5bffe2d"><div class="ttname"><a href="class_trainer.html#a4586cc4da58ba017909f5061e5bffe2d">Trainer::decreaseLearningState</a></div><div class="ttdeci">void decreaseLearningState(Voc *p_pvocCurrent)</div><div class="ttdoc">Word aufgerufen sobald der Nutzer eine Vokabel falsch hat. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:11</div></div>
+<div class="ttc" id="class_trainer_html_a5e49ff2c6e77029427eb87803b41c6bc"><div class="ttname"><a href="class_trainer.html#a5e49ff2c6e77029427eb87803b41c6bc">Trainer::m_stCurrentIndex</a></div><div class="ttdeci">size_t m_stCurrentIndex</div><div class="ttdoc">Das Index an dem sich das Trainier aktuell befinden. </div><div class="ttdef"><b>Definition:</b> trainer.h:27</div></div>
+<div class="ttc" id="class_trainer_html_aa3d993d1eb090f4111e12a710fe9d3f6"><div class="ttname"><a href="class_trainer.html#aa3d993d1eb090f4111e12a710fe9d3f6">Trainer::~Trainer</a></div><div class="ttdeci">~Trainer()</div><div class="ttdoc">Standard-Destruktor um eine Trainer-Instanz vollständig zu zerstören. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:23</div></div>
+<div class="ttc" id="class_trainer_html_a56e46151196bc4bb0d48e93d3d7f8b26"><div class="ttname"><a href="class_trainer.html#a56e46151196bc4bb0d48e93d3d7f8b26">Trainer::hasNext</a></div><div class="ttdeci">bool hasNext()</div><div class="ttdoc">Überprüft ob der Trainer weitere Vokabeln zum Trainieren besitzt. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:94</div></div>
+<div class="ttc" id="class_trainer_html_ae5e9bb338d7b2ae3a7821f9741d3f0f4"><div class="ttname"><a href="class_trainer.html#ae5e9bb338d7b2ae3a7821f9741d3f0f4">Trainer::getCurrentVoc</a></div><div class="ttdeci">Voc * getCurrentVoc() const </div><div class="ttdoc">Gibt die aktuell zu trainierende Vokabel zurück. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:132</div></div>
+<div class="ttc" id="class_voc_html"><div class="ttname"><a href="class_voc.html">Voc</a></div><div class="ttdoc">Speichert alle Informationen zu einer Vokabel ab  Darunter Definitionen, Synonyme, das Wort selbst, das Lernstadium und den Worttype. </div><div class="ttdef"><b>Definition:</b> voc.h:16</div></div>
+<div class="ttc" id="class_language_html"><div class="ttname"><a href="class_language.html">Language</a></div><div class="ttdoc">Speichert alle Informationen für eine geparste Sprache. </div><div class="ttdef"><b>Definition:</b> language.h:16</div></div>
+<div class="ttc" id="class_trainer_html_a22be860c709656042f5a0a01ba2eaf15"><div class="ttname"><a href="class_trainer.html#a22be860c709656042f5a0a01ba2eaf15">Trainer::getRandomDefintion</a></div><div class="ttdeci">QString getRandomDefintion(Voc *p_vpocCurrent)</div><div class="ttdoc">Wählt von allen Definitionen einer Vokabel  eine per Zufall aus. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:116</div></div>
+<div class="ttc" id="class_trainer_html_a5d85fcf026570d902a88742ed0af65da"><div class="ttname"><a href="class_trainer.html#a5d85fcf026570d902a88742ed0af65da">Trainer::m_mppvocVocToTrain</a></div><div class="ttdeci">std::vector&lt; Voc * &gt; m_mppvocVocToTrain</div><div class="ttdoc">Vektor bestehend aus Vokabeln die trainiert werden sollen  Wird random generiert. ...</div><div class="ttdef"><b>Definition:</b> trainer.h:22</div></div>
+<div class="ttc" id="class_trainer_html_a98fdfe33ca4e603222a5f84c5eb54b74"><div class="ttname"><a href="class_trainer.html#a98fdfe33ca4e603222a5f84c5eb54b74">Trainer::stopTraining</a></div><div class="ttdeci">void stopTraining()</div><div class="ttdoc">Stoppt das Training und löscht alle Elemente in der Vokabel-Liste. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:126</div></div>
+<div class="ttc" id="class_trainer_html"><div class="ttname"><a href="class_trainer.html">Trainer</a></div><div class="ttdoc">Trainiert die Vokabeln. </div><div class="ttdef"><b>Definition:</b> trainer.h:15</div></div>
+<div class="ttc" id="class_trainer_html_a62bab4c92f18610f095e5692ba098efe"><div class="ttname"><a href="class_trainer.html#a62bab4c92f18610f095e5692ba098efe">Trainer::Trainer</a></div><div class="ttdeci">Trainer()</div><div class="ttdoc">Standard-Konstruktor um eine Trainer-Instanz zu erzeugen. </div><div class="ttdef"><b>Definition:</b> trainer.cpp:19</div></div>
+<div class="ttc" id="class_trainer_html_af98cfa31ad40e6ceae211350cea593b7"><div class="ttname"><a href="class_trainer.html#af98cfa31ad40e6ceae211350cea593b7">Trainer::m_pvocCurrentVoc</a></div><div class="ttdeci">Voc * m_pvocCurrentVoc</div><div class="ttdoc">Die aktuelle Vokabel die trainiert wird. </div><div class="ttdef"><b>Definition:</b> trainer.h:44</div></div>
+<div class="ttc" id="class_lection_html"><div class="ttname"><a href="class_lection.html">Lection</a></div><div class="ttdoc">Speichert alle Vokabeln einer Lektion und deren Lektionsnummer. </div><div class="ttdef"><b>Definition:</b> lection.h:12</div></div>
+<div class="ttc" id="class_trainer_html_a20b2b5b262e5fdc455d010f88d71e227"><div class="ttname"><a href="class_trainer.html#a20b2b5b262e5fdc455d010f88d71e227">Trainer::startTraining</a></div><div class="ttdeci">void startTraining(Language *p_plangValue, int p_iSizeOfVocsToLearn)</div><div class="ttdoc">Startet das Training  Es wird aus allen Vokabeln einer Sprache eine bestimmte Anzahl an Vokabeln  per...</div><div class="ttdef"><b>Definition:</b> trainer.cpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e6bb53534ac0e427887cf7a94c0c004e.html">C:</a></li><li class="navelem"><a class="el" href="dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html">Users</a></li><li class="navelem"><a class="el" href="dir_7b6d271931df31b68347bce54d96a394.html">Owley</a></li><li class="navelem"><a class="el" href="dir_9228653442f1bf3da679077621d3c6c8.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_f95b496854a115f3eaa84795a58d87d7.html">Schule</a></li><li class="navelem"><a class="el" href="dir_9f772a310d2bccc1a59603a82e4fd4f7.html">CT</a></li><li class="navelem"><a class="el" href="dir_af0942e9c878979c44f238f2ed0e6b30.html">EasyLang</a></li><li class="navelem"><a class="el" href="dir_5aacb4125d29be1141c9fa8ecf0535a4.html">src</a></li><li class="navelem"><b>trainer.h</b></li>
+    <li class="footer">Erzeugt am Fre Jan 3 2014 04:49:04 für EasyLanguage von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>
